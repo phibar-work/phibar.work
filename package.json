@@ -22,9 +22,12 @@
     "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.968.0",
     "@payloadcms/admin-bar": "3.71.1",
+    "@payloadcms/db-mongodb": "3.71.1",
     "@payloadcms/live-preview-react": "3.71.1",
     "@payloadcms/next": "3.71.1",
+    "@payloadcms/plugin-cloud-storage": "^3.71.1",
     "@payloadcms/plugin-form-builder": "3.71.1",
     "@payloadcms/plugin-nested-docs": "3.71.1",
     "@payloadcms/plugin-redirects": "3.71.1",
@@ -52,8 +55,7 @@
     "react-hook-form": "7.45.4",
     "sharp": "0.34.2",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7",
-    "@payloadcms/db-mongodb": "3.71.1"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
