@@ -12,6 +12,7 @@
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
     "ii": "cross-env NODE_OPTIONS=--no-deprecation pnpm --ignore-workspace install",
+    "changeset": "changeset",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "format": "biome format --write .",
@@ -60,6 +61,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@changesets/changelog-github": "^0.5.2",
+    "@changesets/cli": "^2.29.8",
     "@playwright/test": "1.56.1",
     "@tailwindcss/typography": "^0.5.13",
     "@testing-library/react": "16.3.0",
@@ -84,6 +87,11 @@
     "pnpm": "^9 || ^10"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["@biomejs/biome", "sharp", "esbuild", "unrs-resolver"]
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "sharp",
+      "esbuild",
+      "unrs-resolver"
+    ]
   }
 }
