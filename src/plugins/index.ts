@@ -1,12 +1,12 @@
+import { revalidateRedirects } from '@/hooks/revalidateRedirects'
+import { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage'
 import { redirectsPlugin } from '@payloadcms/plugin-redirects'
 import { seoPlugin } from '@payloadcms/plugin-seo'
-import { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage'
+import type { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
+import type { Plugin } from 'payload'
 import { s3Adapter } from './s3-adapter'
-import { Plugin } from 'payload'
-import { revalidateRedirects } from '@/hooks/revalidateRedirects'
-import { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
 
-import { Page } from '@/payload-types'
+import type { Page } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
 
 const generateTitle: GenerateTitle<Page> = ({ doc }) => {

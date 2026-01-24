@@ -31,6 +31,7 @@ function useClickableCard<T extends HTMLElement>({
   const hasActiveParent = useRef<boolean>(false)
   const pressedButton = useRef<number>(0)
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: Payload's original implementation
   const handleMouseDown = useCallback(
     (e: MouseEvent) => {
       if (e.target) {
@@ -49,10 +50,10 @@ function useClickableCard<T extends HTMLElement>({
         }
       }
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [router, card, link, timeDown],
   )
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: Payload's original implementation
   const handleMouseUp = useCallback(
     (e: MouseEvent) => {
       if (link.current?.href) {
@@ -71,10 +72,10 @@ function useClickableCard<T extends HTMLElement>({
         }
       }
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [router, card, link, timeDown],
   )
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: Payload's original implementation
   useEffect(() => {
     const cardNode = card.current
 
@@ -92,7 +93,6 @@ function useClickableCard<T extends HTMLElement>({
     return () => {
       abortController.abort()
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [card, link, router])
 
   return {

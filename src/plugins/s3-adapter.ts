@@ -1,11 +1,10 @@
 import {
-  S3Client,
-  PutObjectCommand,
   DeleteObjectCommand,
   GetObjectCommand,
+  PutObjectCommand,
+  S3Client,
 } from '@aws-sdk/client-s3'
 import type { Adapter, GeneratedAdapter } from '@payloadcms/plugin-cloud-storage/types'
-import type { CollectionConfig } from 'payload'
 
 export interface S3AdapterConfig {
   bucket: string
@@ -29,7 +28,7 @@ export const s3Adapter = ({ bucket, config, acl = 'public-read' }: S3AdapterConf
     forcePathStyle: config.forcePathStyle,
   })
 
-  return ({ collection, prefix }): GeneratedAdapter => {
+  return ({ prefix }): GeneratedAdapter => {
     const getKey = (filename: string) => {
       return prefix ? `${prefix}/${filename}` : filename
     }
@@ -65,7 +64,7 @@ export const s3Adapter = ({ bucket, config, acl = 'public-read' }: S3AdapterConf
         const endpoint = config.endpoint || `https://s3.${config.region}.amazonaws.com`
         return `${endpoint}/${bucket}/${key}`
       },
-      staticHandler: async (req, { params }) => {
+      staticHandler: async (_req, { params }) => {
         const key = getKey(params.filename)
 
         try {
@@ -90,7 +89,7 @@ export const s3Adapter = ({ bucket, config, acl = 'public-read' }: S3AdapterConf
               'Cache-Control': 'public, max-age=31536000',
             },
           })
-        } catch (error) {
+        } catch (_error) {
           return new Response('Not Found', { status: 404 })
         }
       },

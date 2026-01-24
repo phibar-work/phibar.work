@@ -3,7 +3,7 @@ import { getPayload } from 'payload'
 
 import { draftMode } from 'next/headers'
 import { redirect } from 'next/navigation'
-import { NextRequest } from 'next/server'
+import type { NextRequest } from 'next/server'
 
 import configPromise from '@payload-config'
 
@@ -29,7 +29,7 @@ export async function GET(req: NextRequest): Promise<Response> {
     return new Response('This endpoint can only be used for relative previews', { status: 500 })
   }
 
-  let user
+  let user: Awaited<ReturnType<typeof payload.auth>> | undefined
 
   try {
     user = await payload.auth({
