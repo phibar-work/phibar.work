@@ -1,0 +1,51 @@
+name: Version Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    name: Check version bump
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+
+      - name: Get PR version
+        id: pr_version
+        run: echo "version=$(jq -r .version package.json)" >> $GITHUB_OUTPUT
+
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-branch
+
+      - name: Get main version
+        id: main_version
+        run: echo "version=$(jq -r .version main-branch/package.json)" >> $GITHUB_OUTPUT
+
+      - name: Check version updated
+        run: |
+          PR_VERSION="${{ steps.pr_version.outputs.version }}"
+          MAIN_VERSION="${{ steps.main_version.outputs.version }}"
+
+          echo "Main version: $MAIN_VERSION"
+          echo "PR version:   $PR_VERSION"
+
+          if [ "$PR_VERSION" = "$MAIN_VERSION" ]; then
+            echo ""
+            echo "::warning::Version not updated. Remember to bump the version in package.json before merging."
+            echo ""
+            echo "Current version: $MAIN_VERSION"
+            echo ""
+            echo "To bump version, update the \"version\" field in package.json:"
+            echo "  - patch (bug fix):     x.x.1 → x.x.2"
+            echo "  - minor (new feature): x.1.0 → x.2.0"
+            echo "  - major (breaking):    1.0.0 → 2.0.0"
+            exit 1
+          fi
+
+          echo "Version updated: $MAIN_VERSION → $PR_VERSION"

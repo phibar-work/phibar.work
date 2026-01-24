@@ -1,16 +1,16 @@
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
+import { type PayloadRequest, buildConfig } from 'payload'
 import sharp from 'sharp'
-import path from 'path'
-import { buildConfig, PayloadRequest } from 'payload'
-import { fileURLToPath } from 'url'
 
+import { defaultLexical } from '@/fields/defaultLexical'
+import { Footer } from './Footer/config'
+import { Header } from './Header/config'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import { Users } from './collections/Users'
-import { Footer } from './Footer/config'
-import { Header } from './Header/config'
 import { plugins } from './plugins'
-import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
 
 const filename = fileURLToPath(import.meta.url)

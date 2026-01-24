@@ -1,5 +1,5 @@
 import { Banner } from '@payloadcms/ui/elements/Banner'
-import React from 'react'
+import type React from 'react'
 
 import './index.scss'
 
@@ -15,7 +15,7 @@ const BeforeDashboard: React.FC = () => {
       <ul className={`${baseClass}__instructions`}>
         <li>
           {'Create your first page, then '}
-          <a href="/" target="_blank">
+          <a href="/" target="_blank" rel="noreferrer">
             visit your website
           </a>
           {' to see the results.'}

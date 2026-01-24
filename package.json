@@ -1,6 +1,6 @@
 {
   "name": "phibar-work",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Website template for Payload",
   "license": "MIT",
   "type": "module",
@@ -12,8 +12,10 @@
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
     "ii": "cross-env NODE_OPTIONS=--no-deprecation pnpm --ignore-workspace install",
-    "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
-    "lint:fix": "cross-env NODE_OPTIONS=--no-deprecation next lint --fix",
+    "changeset": "changeset",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
     "reinstall": "cross-env NODE_OPTIONS=--no-deprecation rm -rf node_modules && rm pnpm-lock.yaml && pnpm --ignore-workspace install",
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
@@ -58,7 +60,8 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
+    "@biomejs/biome": "^1.9.4",
+    "@changesets/cli": "^2.29.8",
     "@playwright/test": "1.56.1",
     "@tailwindcss/typography": "^0.5.13",
     "@testing-library/react": "16.3.0",
@@ -69,13 +72,10 @@
     "@vitejs/plugin-react": "4.5.2",
     "autoprefixer": "^10.4.19",
     "copyfiles": "^2.4.1",
-    "eslint": "^9.16.0",
-    "eslint-config-next": "15.4.7",
     "jsdom": "26.1.0",
     "playwright": "1.56.1",
     "playwright-core": "1.56.1",
     "postcss": "^8.4.38",
-    "prettier": "^3.4.2",
     "tailwindcss": "^3.4.3",
     "typescript": "5.7.3",
     "vite-tsconfig-paths": "5.1.4",
@@ -87,6 +87,7 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@biomejs/biome",
       "sharp",
       "esbuild",
       "unrs-resolver"
