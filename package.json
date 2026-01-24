@@ -86,11 +86,6 @@
     "pnpm": "^9 || ^10"
   },
   "pnpm": {
-    "onlyBuiltDependencies": [
-      "@biomejs/biome",
-      "sharp",
-      "esbuild",
-      "unrs-resolver"
-    ]
+    "onlyBuiltDependencies": ["@biomejs/biome", "sharp", "esbuild", "unrs-resolver"]
   }
 }
