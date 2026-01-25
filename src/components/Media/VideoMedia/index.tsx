@@ -28,6 +28,7 @@ export const VideoMedia: React.FC<MediaProps> = (props) => {
     const { filename } = resource
 
     return (
+      // biome-ignore lint/a11y/useKeyWithClickEvents: video element handles click for play/pause, keyboard not applicable
       <video
         autoPlay
         className={cn(videoClassName)}
