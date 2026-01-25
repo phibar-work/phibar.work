@@ -3,9 +3,9 @@ import {
   ItalicFeature,
   LinkFeature,
   type LinkFields,
+  lexicalEditor,
   ParagraphFeature,
   UnderlineFeature,
-  lexicalEditor,
 } from '@payloadcms/richtext-lexical'
 import type { TextFieldSingleValidation } from 'payload'
 

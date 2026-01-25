@@ -1,13 +1,12 @@
-import { revalidateRedirects } from '@/hooks/revalidateRedirects'
 import { cloudStoragePlugin } from '@payloadcms/plugin-cloud-storage'
 import { redirectsPlugin } from '@payloadcms/plugin-redirects'
 import { seoPlugin } from '@payloadcms/plugin-seo'
 import type { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
 import type { Plugin } from 'payload'
-import { s3Adapter } from './s3-adapter'
-
+import { revalidateRedirects } from '@/hooks/revalidateRedirects'
 import type { Page } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
+import { s3Adapter } from './s3-adapter'
 
 const generateTitle: GenerateTitle<Page> = ({ doc }) => {
   return doc?.title ? `${doc.title} | Payload Website Template` : 'Payload Website Template'

@@ -1,12 +1,10 @@
 'use client'
 
 import type { PayloadAdminBarProps, PayloadMeUser } from '@payloadcms/admin-bar'
-
-import { cn } from '@/utilities/ui'
 import { PayloadAdminBar } from '@payloadcms/admin-bar'
-import { useSelectedLayoutSegments } from 'next/navigation'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSelectedLayoutSegments } from 'next/navigation'
 import React, { useState } from 'react'
+import { cn } from '@/utilities/ui'
 
 import './index.scss'
 

@@ -1,10 +1,10 @@
-import type { Footer as FooterData } from '@/payload-types'
+import Link from 'next/link'
 
 import { CMSLink } from '@/components/Link'
 import { Logo } from '@/components/Logo/Logo'
+import type { Footer as FooterData } from '@/payload-types'
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 import { getCachedGlobal } from '@/utilities/getGlobals'
-import Link from 'next/link'
 
 export async function Footer() {
   const footerData: FooterData = await getCachedGlobal('footer', 1)()
