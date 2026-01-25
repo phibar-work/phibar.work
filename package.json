@@ -1,6 +1,6 @@
 {
   "name": "phibar-work",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Website template for Payload",
   "license": "MIT",
   "type": "module",
@@ -86,6 +86,11 @@
     "pnpm": "^9 || ^10"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["@biomejs/biome", "sharp", "esbuild", "unrs-resolver"]
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "sharp",
+      "esbuild",
+      "unrs-resolver"
+    ]
   }
 }
