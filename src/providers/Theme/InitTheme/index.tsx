@@ -7,6 +7,7 @@ export const InitTheme: React.FC = () => {
   return (
     // eslint-disable-next-line @next/next/no-before-interactive-script-outside-document
     <Script
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: Required for theme initialization before hydration
       dangerouslySetInnerHTML={{
         __html: `
   (function () {

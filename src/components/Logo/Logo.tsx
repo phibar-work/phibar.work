@@ -14,6 +14,7 @@ export const Logo = (props: Props) => {
 
   return (
     /* eslint-disable @next/next/no-img-element */
+    // biome-ignore lint/performance/noImgElement: external SVG from GitHub, Next.js Image not suitable
     <img
       alt="Payload Logo"
       width={193}

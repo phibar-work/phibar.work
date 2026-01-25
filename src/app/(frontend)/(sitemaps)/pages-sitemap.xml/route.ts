@@ -1,6 +1,6 @@
 import config from '@payload-config'
-import { getServerSideSitemap } from 'next-sitemap'
 import { unstable_cache } from 'next/cache'
+import { getServerSideSitemap } from 'next-sitemap'
 import { getPayload } from 'payload'
 
 const getPagesSitemap = unstable_cache(

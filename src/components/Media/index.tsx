@@ -1,9 +1,7 @@
 import type React from 'react'
 import { Fragment } from 'react'
-
-import type { Props } from './types'
-
 import { ImageMedia } from './ImageMedia'
+import type { Props } from './types'
 import { VideoMedia } from './VideoMedia'
 
 export const Media: React.FC<Props> = (props) => {

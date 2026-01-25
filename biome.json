@@ -1,8 +1,6 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
+  "$schema": "https://biomejs.dev/schemas/2.3.12/schema.json",
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
@@ -21,13 +19,17 @@
       },
       "complexity": {
         "noBannedTypes": "warn",
-        "noForEach": "warn"
+        "noForEach": "warn",
+        "useDateNow": "warn"
       },
       "security": {
         "noDangerouslySetInnerHtml": "warn"
       },
       "a11y": {
         "useKeyWithClickEvents": "warn"
+      },
+      "performance": {
+        "noImgElement": "warn"
       }
     }
   },
@@ -43,7 +45,26 @@
       "semicolons": "asNeeded"
     }
   },
+  "css": {
+    "parser": {
+      "cssModules": true
+    },
+    "linter": {
+      "enabled": false
+    }
+  },
   "files": {
-    "ignore": [".next", "node_modules", "dist", "*.gen.ts", "src/payload-types.ts"]
+    "includes": [
+      "**",
+      "!**/.next",
+      "!**/node_modules",
+      "!**/dist",
+      "!**/*.gen.ts",
+      "!**/src/payload-types.ts",
+      "!**/*.css",
+      "!**/playwright-report",
+      "!**/test-results",
+      "!**/next-env.d.ts"
+    ]
   }
 }

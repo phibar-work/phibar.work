@@ -1,12 +1,10 @@
-import type { Metadata } from 'next'
-
-import { PayloadRedirects } from '@/components/PayloadRedirects'
 import configPromise from '@payload-config'
+import type { Metadata } from 'next'
 import { draftMode } from 'next/headers'
-import { type RequiredDataFromCollectionSlug, getPayload } from 'payload'
+import { getPayload, type RequiredDataFromCollectionSlug } from 'payload'
 import { cache } from 'react'
-
 import { LivePreviewListener } from '@/components/LivePreviewListener'
+import { PayloadRedirects } from '@/components/PayloadRedirects'
 import RichText from '@/components/RichText'
 import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'

@@ -1,10 +1,10 @@
-import type { Footer as FooterData } from '@/payload-types'
+import Link from 'next/link'
 
 import { CMSLink } from '@/components/Link'
 import { Logo } from '@/components/Logo/Logo'
+import type { Footer as FooterData } from '@/payload-types'
 import { ThemeSelector } from '@/providers/Theme/ThemeSelector'
 import { getCachedGlobal } from '@/utilities/getGlobals'
-import Link from 'next/link'
 
 export async function Footer() {
   const footerData: FooterData = await getCachedGlobal('footer', 1)()
@@ -21,8 +21,8 @@ export async function Footer() {
         <div className="flex flex-col-reverse items-start md:flex-row gap-4 md:items-center">
           <ThemeSelector />
           <nav className="flex flex-col md:flex-row gap-4">
-            {navItems.map(({ link }, i) => {
-              return <CMSLink className="text-white" key={i} {...link} />
+            {navItems.map(({ link }) => {
+              return <CMSLink className="text-white" key={link.label} {...link} />
             })}
           </nav>
         </div>
