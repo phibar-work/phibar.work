@@ -1,5 +1,11 @@
 # phibar-work
 
+## 1.3.1
+
+### Patch Changes
+
+- Fix theme auto mode to react to system preference changes at runtime
+
 ## 1.3.0
 
 ### Minor Changes

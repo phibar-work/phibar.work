@@ -61,7 +61,10 @@
       "!**/dist",
       "!**/*.gen.ts",
       "!**/src/payload-types.ts",
-      "!**/*.css"
+      "!**/*.css",
+      "!**/playwright-report",
+      "!**/test-results",
+      "!**/next-env.d.ts"
     ]
   }
 }
