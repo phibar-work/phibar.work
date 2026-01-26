@@ -1,5 +1,5 @@
-import type { Page } from '@/payload-types'
 import RichText from '@/components/frontend/fields/RichText'
+import type { Page } from '@/payload-types'
 
 type SectionData = NonNullable<Page['sections']>[number]
 

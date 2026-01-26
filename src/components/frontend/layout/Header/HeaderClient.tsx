@@ -4,9 +4,8 @@ import { usePathname } from 'next/navigation'
 import type React from 'react'
 import { useEffect, useState } from 'react'
 import { Logo } from '@/components/frontend/fields/Logo/Logo'
-
-import type { Header } from '@/payload-types'
 import { useHeaderTheme } from '@/components/frontend/providers/HeaderTheme'
+import type { Header } from '@/payload-types'
 import { HeaderNav } from './Nav'
 
 interface HeaderClientProps {

@@ -2,8 +2,8 @@ import Link from 'next/link'
 
 import { CMSLink } from '@/components/frontend/fields/Link'
 import { Logo } from '@/components/frontend/fields/Logo/Logo'
-import type { Footer as FooterData } from '@/payload-types'
 import { ThemeSelector } from '@/components/frontend/providers/Theme/ThemeSelector'
+import type { Footer as FooterData } from '@/payload-types'
 import { getCachedGlobal } from '@/utilities/getGlobals'
 
 export async function Footer() {

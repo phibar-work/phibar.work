@@ -35,7 +35,7 @@ export const sections: ArrayField = {
       type: 'text',
       required: true,
     },
-{
+    {
       name: 'sectionId',
       type: 'text',
       required: true,

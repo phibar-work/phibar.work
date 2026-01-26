@@ -1,6 +1,6 @@
 import type { Page } from '@/payload-types'
-import { NoneHero } from './NoneHero'
 import { BannerHero } from './BannerHero'
+import { NoneHero } from './NoneHero'
 
 const heroRenderers = {
   none: NoneHero,
