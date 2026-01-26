@@ -7,6 +7,9 @@ node_modules
 .vercel
 next-env.d.ts
 
+# Payload generated importMap
+src/app/(payload)/admin/importMap.js
+
 # Payload default media upload directory
 public/media/
 
