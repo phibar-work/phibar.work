@@ -81,7 +81,7 @@ export const s3Adapter = ({ bucket, config, acl = 'public-read' }: S3AdapterConf
             return new Response('Not Found', { status: 404 })
           }
 
-          return new Response(body, {
+          return new Response(Buffer.from(body), {
             status: 200,
             headers: {
               'Content-Type': response.ContentType || 'application/octet-stream',

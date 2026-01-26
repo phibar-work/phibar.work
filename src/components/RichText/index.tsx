@@ -14,11 +14,11 @@ import { cn } from '@/utilities/ui'
 type NodeTypes = DefaultNodeTypes
 
 const internalDocToHref = ({ linkNode }: { linkNode: SerializedLinkNode }) => {
-  const { value } = linkNode.fields.doc!
-  if (typeof value !== 'object') {
-    throw new Error('Expected value to be an object')
+  const doc = linkNode.fields.doc
+  if (!doc || typeof doc.value !== 'object') {
+    throw new Error('Expected doc.value to be an object')
   }
-  const slug = value.slug
+  const slug = doc.value.slug
   return `/${slug}`
 }
 

@@ -19,13 +19,17 @@
       },
       "complexity": {
         "noBannedTypes": "warn",
-        "noForEach": "warn"
+        "noForEach": "warn",
+        "useDateNow": "warn"
       },
       "security": {
         "noDangerouslySetInnerHtml": "warn"
       },
       "a11y": {
         "useKeyWithClickEvents": "warn"
+      },
+      "performance": {
+        "noImgElement": "warn"
       }
     }
   },
@@ -42,6 +46,9 @@
     }
   },
   "css": {
+    "parser": {
+      "cssModules": true
+    },
     "linter": {
       "enabled": false
     }
