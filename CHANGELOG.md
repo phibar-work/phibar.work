@@ -1,5 +1,11 @@
 # phibar-work
 
+## 1.4.1
+
+### Patch Changes
+
+- Add Biome lint rules for `complexity/useDateNow` and `performance/noImgElement`
+
 ## 1.4.0
 
 ### Minor Changes
