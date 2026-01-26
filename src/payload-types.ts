@@ -147,21 +147,34 @@ export interface UserAuthOperations {
 export interface Page {
   id: string;
   title: string;
-  content?: {
-    root: {
-      type: string;
-      children: {
-        type: any;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  } | null;
+  hero?: {
+    type?: ('none' | 'banner') | null;
+    image?: (string | null) | Media;
+    tagline?: string | null;
+  };
+  sections?:
+    | {
+        htmlElement: 'section' | 'article';
+        headline: string;
+        sectionId: string;
+        content?: {
+          root: {
+            type: string;
+            children: {
+              type: any;
+              version: number;
+              [k: string]: unknown;
+            }[];
+            direction: ('ltr' | 'rtl') | null;
+            format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+            indent: number;
+            version: number;
+          };
+          [k: string]: unknown;
+        } | null;
+        id?: string | null;
+      }[]
+    | null;
   meta?: {
     title?: string | null;
     /**
@@ -530,7 +543,22 @@ export interface PayloadMigration {
  */
 export interface PagesSelect<T extends boolean = true> {
   title?: T;
-  content?: T;
+  hero?:
+    | T
+    | {
+        type?: T;
+        image?: T;
+        tagline?: T;
+      };
+  sections?:
+    | T
+    | {
+        htmlElement?: T;
+        headline?: T;
+        sectionId?: T;
+        content?: T;
+        id?: T;
+      };
   meta?:
     | T
     | {

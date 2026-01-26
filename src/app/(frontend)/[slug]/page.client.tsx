@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect } from 'react'
-import { useHeaderTheme } from '@/providers/HeaderTheme'
+import { useHeaderTheme } from '@/components/frontend/providers/HeaderTheme'
 
 const PageClient: React.FC = () => {
   /* Force the header to be dark mode while we have an image behind it */

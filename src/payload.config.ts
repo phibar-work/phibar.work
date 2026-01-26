@@ -4,13 +4,13 @@ import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { buildConfig, type PayloadRequest } from 'payload'
 import sharp from 'sharp'
 
-import { defaultLexical } from '@/fields/defaultLexical'
-import { Media } from './collections/Media'
-import { Pages } from './collections/Pages'
-import { Users } from './collections/Users'
-import { Footer } from './Footer/config'
-import { Header } from './Header/config'
-import { plugins } from './plugins'
+import { defaultLexical } from '@/payload/fields/defaultLexical'
+import { Media } from './payload/collections/Media'
+import { Pages } from './payload/collections/Pages'
+import { Users } from './payload/collections/Users'
+import { Footer } from './payload/globals/Footer/config'
+import { Header } from './payload/globals/Header/config'
+import { plugins } from './payload/plugins'
 import { getServerSideURL } from './utilities/getURL'
 
 const filename = fileURLToPath(import.meta.url)
@@ -21,10 +21,10 @@ export default buildConfig({
     components: {
       // The `BeforeLogin` component renders a message that you see while logging into your admin panel.
       // Feel free to delete this at any time. Simply remove the line below.
-      beforeLogin: ['@/components/BeforeLogin'],
+      beforeLogin: ['@/payload/admin/BeforeLogin'],
       // The `BeforeDashboard` component renders the 'welcome' block that you see after logging into your admin panel.
       // Feel free to delete this at any time. Simply remove the line below.
-      beforeDashboard: ['@/components/BeforeDashboard'],
+      beforeDashboard: ['@/payload/admin/BeforeDashboard'],
     },
     importMap: {
       baseDir: path.resolve(dirname),
