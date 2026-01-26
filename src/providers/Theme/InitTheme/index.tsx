@@ -40,7 +40,7 @@ export const InitTheme: React.FC = () => {
       }
     }
 
-    document.documentElement.setAttribute('data-theme', themeToSet)
+    if (themeToSet === 'dark') document.documentElement.classList.add('dark')
   })();
   `,
       }}
