@@ -21,7 +21,9 @@ const CardHeader: React.FC<
 )
 
 const CardTitle: React.FC<
-  { ref?: React.Ref<HTMLHeadingElement> } & React.HTMLAttributes<HTMLHeadingElement>
+  {
+    ref?: React.Ref<HTMLHeadingElement>
+  } & React.HTMLAttributes<HTMLHeadingElement>
 > = ({ className, ref, ...props }) => (
   <h3
     className={cn('text-2xl font-semibold leading-none tracking-tight', className)}
@@ -31,7 +33,9 @@ const CardTitle: React.FC<
 )
 
 const CardDescription: React.FC<
-  { ref?: React.Ref<HTMLParagraphElement> } & React.HTMLAttributes<HTMLParagraphElement>
+  {
+    ref?: React.Ref<HTMLParagraphElement>
+  } & React.HTMLAttributes<HTMLParagraphElement>
 > = ({ className, ref, ...props }) => (
   <p className={cn('text-sm text-zinc-500 dark:text-zinc-400', className)} ref={ref} {...props} />
 )
