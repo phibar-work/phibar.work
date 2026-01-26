@@ -1,5 +1,19 @@
 # phibar-work
 
+## 1.4.0
+
+### Minor Changes
+
+- Upgrade Tailwind CSS to v4
+
+  - Upgrade tailwindcss to v4.1.18
+  - Add @tailwindcss/postcss for PostCSS integration
+  - Remove tailwind.config.mjs (config now in CSS)
+  - Update globals.css with @custom-variant for dark mode
+  - Migrate theme system from data-theme attribute to .dark class
+  - Update all UI components to use Tailwind default oklch colors
+  - Add @tailwindcss/typography plugin via CSS
+
 ## 1.3.1
 
 ### Patch Changes

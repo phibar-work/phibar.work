@@ -46,9 +46,6 @@
     }
   },
   "css": {
-    "parser": {
-      "cssModules": true
-    },
     "linter": {
       "enabled": false
     }
@@ -64,7 +61,8 @@
       "!**/*.css",
       "!**/playwright-report",
       "!**/test-results",
-      "!**/next-env.d.ts"
+      "!**/next-env.d.ts",
+      "!**/importMap.js"
     ]
   }
 }

@@ -55,15 +55,21 @@ export default async function Page({ params: paramsPromise }: Args) {
   const { content } = page
 
   return (
-    <article className="pt-16 pb-24">
+    <article className="flex-1 py-16">
       <PageClient />
       <PayloadRedirects disableNotFound url={url} />
 
       {draft && <LivePreviewListener />}
 
-      <div className="container">
-        <h1 className="text-4xl font-bold mb-8">{page.title}</h1>
-        {content && <RichText data={content} />}
+      <div className="container max-w-3xl">
+        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-zinc-900 dark:text-zinc-50">
+          {page.title}
+        </h1>
+        {content && (
+          <div className="prose prose-zinc dark:prose-invert max-w-none">
+            <RichText data={content} />
+          </div>
+        )}
       </div>
     </article>
   )
