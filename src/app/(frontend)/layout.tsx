@@ -13,11 +13,11 @@ const geistMono = Geist_Mono({
 })
 
 import type React from 'react'
-import { AdminBar } from '@/components/AdminBar'
-import { Footer } from '@/Footer/Component'
-import { Header } from '@/Header/Component'
-import { Providers } from '@/providers'
-import { InitTheme } from '@/providers/Theme/InitTheme'
+import { AdminBar } from '@/components/frontend/layout/AdminBar'
+import { Footer } from '@/components/frontend/layout/Footer'
+import { Header } from '@/components/frontend/layout/Header'
+import { Providers } from '@/components/frontend/providers'
+import { InitTheme } from '@/components/frontend/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
 import { cn } from '@/utilities/ui'
 
@@ -43,7 +43,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           />
 
           <Header />
-          {children}
+          <main>{children}</main>
           <Footer />
         </Providers>
       </body>

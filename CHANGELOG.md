@@ -1,5 +1,11 @@
 # phibar-work
 
+## 1.5.0
+
+### Minor Changes
+
+- Add hero and sections system to Pages, replacing single content richText field with a configurable hero (none or banner) and an array of sections with scroll-anchored IDs
+
 ## 1.4.1
 
 ### Patch Changes

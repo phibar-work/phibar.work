@@ -3,9 +3,10 @@ import type { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 import { getPayload, type RequiredDataFromCollectionSlug } from 'payload'
 import { cache } from 'react'
-import { LivePreviewListener } from '@/components/LivePreviewListener'
-import { PayloadRedirects } from '@/components/PayloadRedirects'
-import RichText from '@/components/RichText'
+import { LivePreviewListener } from '@/components/frontend/LivePreviewListener'
+import { PayloadRedirects } from '@/components/frontend/PayloadRedirects'
+import { RenderHero } from '@/components/frontend/renderers/Hero'
+import { RenderSections } from '@/components/frontend/renderers/Sections'
 import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'
 
@@ -52,26 +53,16 @@ export default async function Page({ params: paramsPromise }: Args) {
     return <PayloadRedirects url={url} />
   }
 
-  const { content } = page
-
   return (
-    <article className="flex-1 py-16">
+    <div className="flex-1 py-16">
       <PageClient />
       <PayloadRedirects disableNotFound url={url} />
 
       {draft && <LivePreviewListener />}
 
-      <div className="container max-w-3xl">
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-zinc-900 dark:text-zinc-50">
-          {page.title}
-        </h1>
-        {content && (
-          <div className="prose prose-zinc dark:prose-invert max-w-none">
-            <RichText data={content} />
-          </div>
-        )}
-      </div>
-    </article>
+      <RenderHero hero={page.hero} title={page.title} />
+      <RenderSections sections={page.sections} />
+    </div>
   )
 }
 
