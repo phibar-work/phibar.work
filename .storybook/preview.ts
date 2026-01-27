@@ -1,0 +1,46 @@
+import type { Preview } from '@storybook/nextjs-vite'
+import '../src/app/(frontend)/globals.css'
+
+const preview: Preview = {
+  globalTypes: {
+    theme: {
+      description: 'Toggle light/dark mode',
+      toolbar: {
+        title: 'Theme',
+        icon: 'mirror',
+        items: [
+          { value: 'light', title: 'Light', icon: 'sun' },
+          { value: 'dark', title: 'Dark', icon: 'moon' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
+  initialGlobals: {
+    theme: 'light',
+  },
+  decorators: [
+    (Story, context) => {
+      const theme = context.globals.theme
+      document.documentElement.classList.toggle('dark', theme === 'dark')
+      return Story()
+    },
+  ],
+  parameters: {
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i,
+      },
+    },
+
+    a11y: {
+      // 'todo' - show a11y violations in the test UI only
+      // 'error' - fail CI on a11y violations
+      // 'off' - skip a11y checks entirely
+      test: 'todo',
+    },
+  },
+}
+
+export default preview

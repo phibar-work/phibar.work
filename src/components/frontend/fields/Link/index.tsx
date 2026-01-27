@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type React from 'react'
-import { Button, type ButtonProps } from '@/components/shared/button'
+import { Button, type ButtonProps } from '@/components/design-system/primitives/button'
 import type { Page } from '@/payload-types'
 import { cn } from '@/utilities/ui'
 

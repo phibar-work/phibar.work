@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Button } from '@/components/shared/button'
+import { Button } from '@/components/design-system/primitives/button'
 
 export default function NotFound() {
   return (
