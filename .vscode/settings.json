@@ -36,5 +36,16 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit"
     }
+  },
+  "explorer.autoReveal": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.ts": "${capture}.test.ts, ${capture}.stories.ts, ${capture}.harness.ts",
+    "*.tsx": "${capture}.test.tsx, ${capture}.stories.tsx, ${capture}.harness.tsx",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb"
   }
 }
