@@ -32,6 +32,27 @@ const nextConfig = {
   },
   reactStrictMode: true,
   redirects,
+  async rewrites() {
+    const rybbitHost = process.env.NEXT_PUBLIC_RYBBIT_HOST || 'https://rybbit.phibar.work'
+    return {
+      beforeFiles: [
+        {
+          source: '/api/script.js',
+          destination: `${rybbitHost}/api/script.js`,
+        },
+        {
+          source: '/api/track',
+          destination: `${rybbitHost}/api/track`,
+        },
+        {
+          source: '/api/site/:path*',
+          destination: `${rybbitHost}/api/site/:path*`,
+        },
+      ],
+      afterFiles: [],
+      fallback: [],
+    }
+  },
 }
 
 export default withPayload(nextConfig, { devBundleServerPackages: false })

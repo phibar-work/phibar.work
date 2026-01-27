@@ -1,5 +1,15 @@
 # phibar-work
 
+## 1.6.0
+
+### Minor Changes
+
+- Integrate Rybbit analytics with ad blocker bypass
+
+  - Add Rybbit tracking script to frontend layout via Next.js Script component
+  - Add Next.js rewrites to proxy script, tracking, and site config endpoints through own domain
+  - Configure site ID and host via environment variables
+
 ## 1.5.0
 
 ### Minor Changes
