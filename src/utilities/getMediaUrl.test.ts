@@ -27,9 +27,7 @@ describe('getMediaUrl', () => {
   })
 
   it('appends cache tag to absolute URL', () => {
-    expect(getMediaUrl('https://example.com/img.png', 'v1')).toBe(
-      'https://example.com/img.png?v1',
-    )
+    expect(getMediaUrl('https://example.com/img.png', 'v1')).toBe('https://example.com/img.png?v1')
   })
 
   it('appends cache tag to relative URL', () => {
