@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { draftMode } from 'next/headers'
+import Script from 'next/script'
 
 const geistSans = Geist({
   subsets: ['latin'],
@@ -46,6 +47,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <main>{children}</main>
           <Footer />
         </Providers>
+        <Script
+          src="/api/script.js"
+          data-site-id={process.env.NEXT_PUBLIC_RYBBIT_SITE_ID}
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
