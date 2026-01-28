@@ -1,5 +1,14 @@
 # phibar-work
 
+## 1.7.1
+
+### Patch Changes
+
+- Fix Rybbit analytics session replay by adding missing API rewrites
+  - Add `/api/replay.js` rewrite for session replay script
+  - Add `/api/session-replay/*` rewrite for recording data
+  - Consolidate script rewrites using regex pattern
+
 ## 1.7.0
 
 ### Minor Changes
