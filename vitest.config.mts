@@ -12,6 +12,45 @@ const dirname =
 export default defineConfig({
   plugins: [tsconfigPaths(), react()],
   test: {
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html', 'json-summary', 'lcov'],
+      reportsDirectory: './coverage',
+
+      include: ['src/utilities/**/*.{ts,tsx}', 'src/components/**/*.{ts,tsx}'],
+
+      exclude: [
+        // Test files
+        '**/*.test.{ts,tsx}',
+        '**/*.stories.{ts,tsx}',
+        '**/__snapshots__/**',
+        'src/test/**',
+
+        // Next.js app routes
+        'src/app/**',
+
+        // Payload CMS
+        'src/payload/**',
+        'src/migrations/**',
+        'src/payload.config.ts',
+        'src/payload-types.ts',
+        'src/components/admin/**',
+
+        // Generated files
+        '**/*.d.ts',
+        'src/cssVariables.js',
+      ],
+
+      thresholds: {
+        lines: 80,
+        functions: 80,
+        branches: 70,
+        statements: 80,
+      },
+
+      all: true,
+      clean: true,
+    },
     projects: [
       {
         extends: true,

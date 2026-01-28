@@ -1,5 +1,17 @@
 # phibar-work
 
+## 1.9.0
+
+### Minor Changes
+
+- Add code coverage with Vitest v8 provider
+
+  - Configure coverage in `vitest.config.mts` with 80% thresholds (lines, functions, statements) and 70% branches
+  - Exclude Next.js app routes, Payload CMS files, admin components, and generated files from coverage
+  - Add `coverage`, `test:unit:coverage`, and `coverage:open` scripts to package.json
+  - Update CI workflow to run coverage and upload HTML report as artifact
+  - Add `coverage/` to `.gitignore`
+
 ## 1.8.0
 
 ### Minor Changes
