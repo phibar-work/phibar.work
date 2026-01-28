@@ -39,9 +39,10 @@ const nextConfig = {
     const rybbitHost = process.env.NEXT_PUBLIC_RYBBIT_HOST || 'https://rybbit.phibar.work'
     return {
       beforeFiles: [
+        // Rybbit analytics - forward all matching paths
         {
-          source: '/api/script.js',
-          destination: `${rybbitHost}/api/script.js`,
+          source: '/api/:path(script|replay).js',
+          destination: `${rybbitHost}/api/:path.js`,
         },
         {
           source: '/api/track',
@@ -50,6 +51,10 @@ const nextConfig = {
         {
           source: '/api/site/:path*',
           destination: `${rybbitHost}/api/site/:path*`,
+        },
+        {
+          source: '/api/session-replay/:path*',
+          destination: `${rybbitHost}/api/session-replay/:path*`,
         },
       ],
       afterFiles: [],
