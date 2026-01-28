@@ -42,6 +42,21 @@ exports[`RichText snapshots > WithCustomClass matches snapshot 1`] = `
 </div>
 `;
 
+exports[`RichText snapshots > WithInternalDocLink matches snapshot 1`] = `
+<div
+  class="payload-richtext container mx-auto prose md:prose-md dark:prose-invert"
+>
+  <p>
+    Visit our 
+    <a
+      href="/about"
+    >
+      About page
+    </a>
+  </p>
+</div>
+`;
+
 exports[`RichText snapshots > WithoutGutter matches snapshot 1`] = `
 <div
   class="payload-richtext max-w-none mx-auto prose md:prose-md dark:prose-invert"

@@ -42,3 +42,12 @@ export const NullHero: Story = {
     hero: null,
   },
 }
+
+export const UnknownType: Story = {
+  args: {
+    title: 'Unknown Hero Type',
+    hero: {
+      type: 'unknown-type' as any,
+    },
+  },
+}

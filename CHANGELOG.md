@@ -1,5 +1,20 @@
 # phibar-work
 
+## 1.10.0
+
+### Minor Changes
+
+- Increase test coverage to 100% lines across all files
+
+  - Add stories for uncovered component branches (select separator, reference links, fragment wrapper, internal doc links, empty nav, unknown hero type, banner hero image)
+  - Add unit tests for Theme provider, ThemeSelector, shared utilities, and type validators
+  - Add unit tests for `getURL`, `deepMerge` edge cases, and `generatePreviewPath` null/undefined slugs
+  - Add `HeaderTheme` hook tests detecting dark/light from document classes
+  - Add `storybook-snapshots` utility tests for fallback component name
+  - Mock `next/image` in dedicated unit tests for ImageMedia and BannerHero resource paths
+  - Remove dead `useEffect` suspend handler from VideoMedia
+  - Exclude type-only `Media/types.ts` from coverage reporting
+
 ## 1.9.0
 
 ### Minor Changes

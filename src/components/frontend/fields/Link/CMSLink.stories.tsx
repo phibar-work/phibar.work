@@ -116,3 +116,58 @@ export const WithChildren: Story = {
     children: 'Custom child content',
   },
 }
+
+export const ReferenceLink: Story = {
+  args: {
+    type: 'reference',
+    reference: {
+      relationTo: 'pages',
+      value: {
+        id: 1,
+        slug: 'about-us',
+        title: 'About Us',
+      } as any,
+    },
+    label: 'About Us',
+    appearance: 'inline',
+  },
+}
+
+export const ReferenceLinkAsButton: Story = {
+  args: {
+    type: 'reference',
+    reference: {
+      relationTo: 'pages',
+      value: {
+        id: 2,
+        slug: 'services',
+        title: 'Services',
+      } as any,
+    },
+    label: 'Our Services',
+    appearance: 'default',
+  },
+}
+
+export const ReferenceWithStringValue: Story = {
+  args: {
+    type: 'reference',
+    reference: {
+      relationTo: 'pages',
+      value: 'page-id-123',
+    },
+    url: '/fallback',
+    label: 'Referenced Page',
+    appearance: 'inline',
+  },
+}
+
+export const NoHrefRendersNull: Story = {
+  args: {
+    type: 'reference',
+    reference: null,
+    url: null,
+    label: 'Broken Link',
+    appearance: 'inline',
+  },
+}

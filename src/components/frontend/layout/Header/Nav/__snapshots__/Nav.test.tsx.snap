@@ -68,6 +68,12 @@ exports[`HeaderNav snapshots > ManyItems matches snapshot 1`] = `
 </nav>
 `;
 
+exports[`HeaderNav snapshots > NoNavItems matches snapshot 1`] = `
+<nav
+  class="flex gap-3 items-center"
+/>
+`;
+
 exports[`HeaderNav snapshots > SingleItem matches snapshot 1`] = `
 <nav
   class="flex gap-3 items-center"

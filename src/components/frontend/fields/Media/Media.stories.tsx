@@ -50,3 +50,11 @@ export const VideoInFigure: Story = {
     className: 'max-w-2xl',
   },
 }
+
+export const WithFragmentWrapper: Story = {
+  args: {
+    resource: mockVideoResource,
+    htmlElement: null,
+    className: 'should-not-apply',
+  },
+}

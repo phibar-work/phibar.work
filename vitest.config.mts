@@ -62,6 +62,9 @@ export default defineConfig({
         // Browser detection (trivial, no logic to test)
         'src/utilities/canUseDOM.ts',
 
+        // Type-only files (no runtime code)
+        'src/components/frontend/fields/Media/types.ts',
+
         // Generated files
         '**/*.d.ts',
         'src/cssVariables.js',

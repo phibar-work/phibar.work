@@ -40,3 +40,5 @@ exports[`Hero snapshots > NullHero matches snapshot 1`] = `
   Null Hero
 </h1>
 `;
+
+exports[`Hero snapshots > UnknownType matches snapshot 1`] = `null`;

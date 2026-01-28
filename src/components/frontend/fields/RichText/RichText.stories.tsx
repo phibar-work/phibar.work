@@ -62,3 +62,42 @@ export const WithCustomClass: Story = {
     className: 'text-lg',
   },
 }
+
+export const WithInternalDocLink: Story = {
+  args: {
+    data: {
+      root: {
+        type: 'root' as const,
+        children: [
+          {
+            type: 'paragraph' as const,
+            children: [
+              { type: 'text' as const, text: 'Visit our ' },
+              {
+                type: 'link' as const,
+                fields: {
+                  linkType: 'internal',
+                  doc: {
+                    relationTo: 'pages',
+                    value: {
+                      id: '1',
+                      slug: 'about',
+                      title: 'About',
+                    },
+                  },
+                  newTab: false,
+                  url: '',
+                },
+                children: [{ type: 'text' as const, text: 'About page' }],
+              } as any,
+            ],
+          },
+        ],
+        direction: 'ltr' as const,
+        format: '' as const,
+        indent: 0,
+        version: 1,
+      },
+    },
+  },
+}

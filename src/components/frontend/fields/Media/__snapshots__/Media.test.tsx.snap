@@ -48,3 +48,16 @@ exports[`Media snapshots > VideoWithClassName matches snapshot 1`] = `
   </video>
 </div>
 `;
+
+exports[`Media snapshots > WithFragmentWrapper matches snapshot 1`] = `
+<video
+  autoplay=""
+  class=""
+  loop=""
+  playsinline=""
+>
+  <source
+    src="http://localhost:3000/media/sample-video.mp4"
+  />
+</video>
+`;

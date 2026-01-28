@@ -86,3 +86,13 @@ export const Empty: Story = {
     },
   },
 }
+
+export const NoNavItems: Story = {
+  args: {
+    data: {
+      id: '2',
+      createdAt: '2024-01-01T00:00:00.000Z',
+      updatedAt: '2024-01-01T00:00:00.000Z',
+    } as any,
+  },
+}

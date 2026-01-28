@@ -74,6 +74,35 @@ exports[`CMSLink snapshots > LinkVariant matches snapshot 1`] = `
 </a>
 `;
 
+exports[`CMSLink snapshots > NoHrefRendersNull matches snapshot 1`] = `null`;
+
+exports[`CMSLink snapshots > ReferenceLink matches snapshot 1`] = `
+<a
+  class=""
+  href="/about-us"
+>
+  About Us
+</a>
+`;
+
+exports[`CMSLink snapshots > ReferenceLinkAsButton matches snapshot 1`] = `
+<a
+  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90"
+  href="/services"
+>
+  Our Services
+</a>
+`;
+
+exports[`CMSLink snapshots > ReferenceWithStringValue matches snapshot 1`] = `
+<a
+  class=""
+  href="/fallback"
+>
+  Referenced Page
+</a>
+`;
+
 exports[`CMSLink snapshots > SmallButton matches snapshot 1`] = `
 <a
   class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-9 rounded px-3 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90"
