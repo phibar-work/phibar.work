@@ -1,5 +1,20 @@
 # phibar-work
 
+## 1.7.0
+
+### Minor Changes
+
+- Add Storybook with design system primitives and colocated tests
+
+  - Rename `shared/` to `design-system/primitives/` and update all imports
+  - Add colocated `.stories.tsx` for all 8 primitives (Button, Card, Checkbox, Input, Label, Pagination, Select, Textarea)
+  - Configure Storybook preview with Tailwind CSS and light/dark theme toggle
+  - Add design system Introduction.mdx landing page
+  - Remove template example stories and separate test directory
+  - Add colocated unit tests for 7 utility modules (41 tests)
+  - Restructure vitest into named `unit` and `storybook` projects
+  - Update CI to run unit and storybook tests as parallel jobs
+
 ## 1.6.0
 
 ### Minor Changes

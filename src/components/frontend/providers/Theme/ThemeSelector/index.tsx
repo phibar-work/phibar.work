@@ -7,7 +7,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/shared/select'
+} from '@/components/design-system/primitives/select'
 import { useTheme } from '..'
 import type { Theme } from './types'
 import { themeLocalStorageKey } from './types'
