@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Sections snapshots > EmptySections matches snapshot 1`] = `null`;
+
+exports[`Sections snapshots > MultipleSections matches snapshot 1`] = `
+<section
+  id="intro"
+>
+  <h2>
+    Introduction
+  </h2>
+  <div
+    class="payload-richtext container mx-auto prose md:prose-md dark:prose-invert"
+  >
+    <p>
+      Welcome to our site.
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Sections snapshots > NullSections matches snapshot 1`] = `null`;
+
+exports[`Sections snapshots > SingleSection matches snapshot 1`] = `
+<section
+  id="intro"
+>
+  <h2>
+    Introduction
+  </h2>
+  <div
+    class="payload-richtext container mx-auto prose md:prose-md dark:prose-invert"
+  >
+    <p>
+      Welcome to our site.
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Sections snapshots > UndefinedSections matches snapshot 1`] = `null`;

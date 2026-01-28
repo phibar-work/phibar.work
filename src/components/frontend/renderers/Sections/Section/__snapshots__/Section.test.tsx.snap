@@ -1,0 +1,45 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Section snapshots > ArticleElement matches snapshot 1`] = `
+<article
+  id="article-section"
+>
+  <h2>
+    Article Content
+  </h2>
+  <div
+    class="payload-richtext container mx-auto prose md:prose-md dark:prose-invert"
+  >
+    <p>
+      This section uses an article element.
+    </p>
+  </div>
+</article>
+`;
+
+exports[`Section snapshots > BasicSection matches snapshot 1`] = `
+<section
+  id="intro"
+>
+  <h2>
+    Introduction
+  </h2>
+  <div
+    class="payload-richtext container mx-auto prose md:prose-md dark:prose-invert"
+  >
+    <p>
+      This is some sample content.
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Section snapshots > WithoutContent matches snapshot 1`] = `
+<section
+  id="empty-section"
+>
+  <h2>
+    Section Without Content
+  </h2>
+</section>
+`;

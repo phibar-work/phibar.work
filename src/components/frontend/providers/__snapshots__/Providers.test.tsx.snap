@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Providers snapshots > Default matches snapshot 1`] = `
+<div
+  class="p-4"
+>
+  <h1
+    class="text-2xl font-bold"
+  >
+    Content inside Providers
+  </h1>
+  <p
+    class="text-zinc-600 dark:text-zinc-400"
+  >
+    This content is wrapped with Theme and HeaderTheme providers.
+  </p>
+</div>
+`;

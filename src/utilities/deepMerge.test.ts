@@ -53,4 +53,15 @@ describe('deepMerge', () => {
     expect(result).not.toBe(target)
     expect(target).toEqual({ a: { x: 1 } })
   })
+
+  it('skips merge when source is not an object', () => {
+    const target = { a: 1 }
+    const result = deepMerge(target, 'string' as any)
+    expect(result).toEqual({ a: 1 })
+  })
+
+  it('skips merge when target is not an object', () => {
+    const result = deepMerge(42 as any, { b: 2 })
+    expect(result).toEqual({})
+  })
 })

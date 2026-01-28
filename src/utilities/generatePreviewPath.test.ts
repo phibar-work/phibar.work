@@ -32,4 +32,36 @@ describe('generatePreviewPath', () => {
     expect(result).toContain('/next/preview?')
     expect(result).toContain('path=%2F')
   })
+
+  it('returns null for undefined slug', () => {
+    const result = generatePreviewPath({
+      collection: 'pages',
+      slug: undefined,
+    } as any)
+
+    expect(result).toBeNull()
+  })
+
+  it('returns null for null slug', () => {
+    const result = generatePreviewPath({
+      collection: 'pages',
+      slug: null,
+    } as any)
+
+    expect(result).toBeNull()
+  })
+
+  it('includes PREVIEW_SECRET when env var is set', () => {
+    const originalSecret = process.env.PREVIEW_SECRET
+    process.env.PREVIEW_SECRET = 'my-secret'
+
+    const result = generatePreviewPath({
+      collection: 'pages',
+      slug: 'test',
+    } as Parameters<typeof generatePreviewPath>[0])
+
+    expect(result).toContain('previewSecret=my-secret')
+
+    process.env.PREVIEW_SECRET = originalSecret
+  })
 })

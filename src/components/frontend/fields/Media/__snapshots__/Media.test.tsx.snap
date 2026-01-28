@@ -1,0 +1,63 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Media snapshots > Video matches snapshot 1`] = `
+<div>
+  <video
+    autoplay=""
+    class=""
+    loop=""
+    playsinline=""
+  >
+    <source
+      src="http://localhost:3000/media/sample-video.mp4"
+    />
+  </video>
+</div>
+`;
+
+exports[`Media snapshots > VideoInFigure matches snapshot 1`] = `
+<figure
+  class="max-w-2xl"
+>
+  <video
+    autoplay=""
+    class=""
+    loop=""
+    playsinline=""
+  >
+    <source
+      src="http://localhost:3000/media/sample-video.mp4"
+    />
+  </video>
+</figure>
+`;
+
+exports[`Media snapshots > VideoWithClassName matches snapshot 1`] = `
+<div
+  class="rounded-lg overflow-hidden"
+>
+  <video
+    autoplay=""
+    class="w-full"
+    loop=""
+    playsinline=""
+  >
+    <source
+      src="http://localhost:3000/media/sample-video.mp4"
+    />
+  </video>
+</div>
+`;
+
+exports[`Media snapshots > WithFragmentWrapper matches snapshot 1`] = `
+<video
+  autoplay=""
+  class=""
+  loop=""
+  playsinline=""
+>
+  <source
+    src="http://localhost:3000/media/sample-video.mp4"
+  />
+</video>
+`;

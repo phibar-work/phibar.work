@@ -6,6 +6,7 @@ import {
   SelectGroup,
   SelectItem,
   SelectLabel,
+  SelectSeparator,
   SelectTrigger,
   SelectValue,
 } from './select'
@@ -49,6 +50,7 @@ export const WithGroups: Story = {
           <SelectItem value="banana">Banana</SelectItem>
           <SelectItem value="orange">Orange</SelectItem>
         </SelectGroup>
+        <SelectSeparator />
         <SelectGroup>
           <SelectLabel>Vegetables</SelectLabel>
           <SelectItem value="carrot">Carrot</SelectItem>

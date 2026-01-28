@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`VideoMedia snapshots > Default matches snapshot 1`] = `
+<video
+  autoplay=""
+  class=""
+  loop=""
+  playsinline=""
+>
+  <source
+    src="http://localhost:3000/media/sample-video.mp4"
+  />
+</video>
+`;
+
+exports[`VideoMedia snapshots > NoResource matches snapshot 1`] = `null`;
+
+exports[`VideoMedia snapshots > WithClassName matches snapshot 1`] = `
+<video
+  autoplay=""
+  class="rounded-lg w-full max-w-2xl"
+  loop=""
+  playsinline=""
+>
+  <source
+    src="http://localhost:3000/media/sample-video.mp4"
+  />
+</video>
+`;

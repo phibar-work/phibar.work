@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HeaderTheme snapshots > Default matches snapshot 1`] = `
+<div
+  class="p-4"
+>
+  <p>
+    Current header theme: 
+    light
+  </p>
+</div>
+`;
