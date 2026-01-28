@@ -1,5 +1,16 @@
 # phibar-work
 
+## 1.8.0
+
+### Minor Changes
+
+- Add snapshot testing for Storybook components
+
+  - Add `runSnapshotTests` utility for portable stories (`src/test/storybook-snapshots.tsx`)
+  - Add colocated snapshot tests for all 8 design system primitives (44 snapshots)
+  - Configure vitest setup with Storybook project annotations
+  - Add `@storybook/react` for portable stories API in jsdom
+
 ## 1.7.1
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "phibar-work",
-  "version": "1.7.1",
+  "version": "1.8.0",
   "description": "Website template for Payload",
   "license": "MIT",
   "type": "module",
@@ -67,6 +67,7 @@
     "@storybook/addon-docs": "^10.2.1",
     "@storybook/addon-vitest": "^10.2.1",
     "@storybook/nextjs-vite": "^10.2.1",
+    "@storybook/react": "^10.2.1",
     "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/typography": "0.5.16",
     "@testing-library/react": "16.3.2",

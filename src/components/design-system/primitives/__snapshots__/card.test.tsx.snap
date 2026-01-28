@@ -1,0 +1,87 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Card snapshots > Default matches snapshot 1`] = `
+<div
+  class="rounded-lg border border-zinc-200 bg-white text-zinc-950 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 w-[350px]"
+>
+  <div
+    class="flex flex-col space-y-1.5 p-6"
+  >
+    <h3
+      class="text-2xl font-semibold leading-none tracking-tight"
+    >
+      Card Title
+    </h3>
+    <p
+      class="text-sm text-zinc-500 dark:text-zinc-400"
+    >
+      Card description goes here.
+    </p>
+  </div>
+  <div
+    class="p-6 pt-0"
+  >
+    <p>
+      Card content with some example text to demonstrate the layout.
+    </p>
+  </div>
+  <div
+    class="items-center p-6 pt-0 flex justify-between"
+  >
+    <button
+      class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-zinc-200 bg-white hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+    >
+      Cancel
+    </button>
+    <button
+      class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90"
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Card snapshots > HeaderOnly matches snapshot 1`] = `
+<div
+  class="rounded-lg border border-zinc-200 bg-white text-zinc-950 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 w-[350px]"
+>
+  <div
+    class="flex flex-col space-y-1.5 p-6"
+  >
+    <h3
+      class="text-2xl font-semibold leading-none tracking-tight"
+    >
+      Notifications
+    </h3>
+    <p
+      class="text-sm text-zinc-500 dark:text-zinc-400"
+    >
+      You have 3 unread messages.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Card snapshots > WithContent matches snapshot 1`] = `
+<div
+  class="rounded-lg border border-zinc-200 bg-white text-zinc-950 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 w-[350px]"
+>
+  <div
+    class="flex flex-col space-y-1.5 p-6"
+  >
+    <h3
+      class="text-2xl font-semibold leading-none tracking-tight"
+    >
+      Summary
+    </h3>
+  </div>
+  <div
+    class="p-6 pt-0"
+  >
+    <p>
+      This card only has a header and content section, no footer.
+    </p>
+  </div>
+</div>
+`;
