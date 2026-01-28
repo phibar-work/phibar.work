@@ -1,0 +1,93 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CMSLink snapshots > ButtonDefault matches snapshot 1`] = `
+<a
+  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90"
+  href="/contact"
+>
+  Contact
+</a>
+`;
+
+exports[`CMSLink snapshots > ButtonGhost matches snapshot 1`] = `
+<a
+  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+  href="/docs"
+>
+  Documentation
+</a>
+`;
+
+exports[`CMSLink snapshots > ButtonOutline matches snapshot 1`] = `
+<a
+  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-zinc-200 bg-white hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+  href="/services"
+>
+  Our Services
+</a>
+`;
+
+exports[`CMSLink snapshots > ButtonSecondary matches snapshot 1`] = `
+<a
+  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-zinc-100 text-zinc-900 hover:bg-zinc-100/80 dark:bg-zinc-800 dark:text-zinc-50 dark:hover:bg-zinc-800/80"
+  href="/pricing"
+>
+  View Pricing
+</a>
+`;
+
+exports[`CMSLink snapshots > ExternalLink matches snapshot 1`] = `
+<a
+  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-zinc-200 bg-white hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+  href="https://example.com"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  External Site
+</a>
+`;
+
+exports[`CMSLink snapshots > InlineLink matches snapshot 1`] = `
+<a
+  class=""
+  href="/about"
+>
+  About Us
+</a>
+`;
+
+exports[`CMSLink snapshots > LargeButton matches snapshot 1`] = `
+<a
+  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-11 rounded px-8 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90"
+  href="/start"
+>
+  Get Started
+</a>
+`;
+
+exports[`CMSLink snapshots > LinkVariant matches snapshot 1`] = `
+<a
+  class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+  href="/help"
+>
+  Get Help
+</a>
+`;
+
+exports[`CMSLink snapshots > SmallButton matches snapshot 1`] = `
+<a
+  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-9 rounded px-3 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90"
+  href="/signup"
+>
+  Sign Up
+</a>
+`;
+
+exports[`CMSLink snapshots > WithChildren matches snapshot 1`] = `
+<a
+  class=""
+  href="/home"
+>
+  Custom child content
+</a>
+`;

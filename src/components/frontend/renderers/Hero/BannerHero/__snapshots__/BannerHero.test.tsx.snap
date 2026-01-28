@@ -1,0 +1,64 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BannerHero snapshots > LongContent matches snapshot 1`] = `
+<div
+  class="relative"
+>
+  <h1
+    class="text-4xl md:text-5xl font-bold mb-4 text-zinc-900 dark:text-zinc-50"
+  >
+    This is a Very Long Title That Might Need to Wrap Across Multiple Lines
+  </h1>
+  <p
+    class="text-lg text-zinc-600 dark:text-zinc-400"
+  >
+    This is a longer tagline that provides more context about what visitors can expect to find on this page
+  </p>
+</div>
+`;
+
+exports[`BannerHero snapshots > ShortTitle matches snapshot 1`] = `
+<div
+  class="relative"
+>
+  <h1
+    class="text-4xl md:text-5xl font-bold mb-4 text-zinc-900 dark:text-zinc-50"
+  >
+    Hello
+  </h1>
+  <p
+    class="text-lg text-zinc-600 dark:text-zinc-400"
+  >
+    A brief introduction
+  </p>
+</div>
+`;
+
+exports[`BannerHero snapshots > TitleOnly matches snapshot 1`] = `
+<div
+  class="relative"
+>
+  <h1
+    class="text-4xl md:text-5xl font-bold mb-4 text-zinc-900 dark:text-zinc-50"
+  >
+    Welcome to Our Site
+  </h1>
+</div>
+`;
+
+exports[`BannerHero snapshots > WithTagline matches snapshot 1`] = `
+<div
+  class="relative"
+>
+  <h1
+    class="text-4xl md:text-5xl font-bold mb-4 text-zinc-900 dark:text-zinc-50"
+  >
+    Welcome to Our Site
+  </h1>
+  <p
+    class="text-lg text-zinc-600 dark:text-zinc-400"
+  >
+    Building amazing experiences together
+  </p>
+</div>
+`;

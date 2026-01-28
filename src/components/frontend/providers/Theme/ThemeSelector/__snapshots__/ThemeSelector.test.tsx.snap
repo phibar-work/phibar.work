@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ThemeSelector snapshots > Default matches snapshot 1`] = `
+<button
+  aria-autocomplete="none"
+  aria-controls="radix-_r_0_"
+  aria-expanded="false"
+  aria-label="Select a theme"
+  class="flex h-10 items-center justify-between rounded border border-zinc-200 px-3 py-2 text-inherit placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-950 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-zinc-800 dark:bg-zinc-950 dark:placeholder:text-zinc-400 dark:focus:ring-zinc-300 [&>span]:line-clamp-1 w-auto bg-transparent gap-2 pl-0 md:pl-3 border-none"
+  data-state="closed"
+  dir="ltr"
+  role="combobox"
+  type="button"
+>
+  <span
+    style="pointer-events: none;"
+  >
+    Auto
+  </span>
+  <svg
+    aria-hidden="true"
+    class="lucide lucide-chevron-down h-4 w-4 opacity-50"
+    fill="none"
+    height="24"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="m6 9 6 6 6-6"
+    />
+  </svg>
+</button>
+`;

@@ -1,0 +1,42 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Hero snapshots > BannerType matches snapshot 1`] = `
+<div
+  class="relative"
+>
+  <h1
+    class="text-4xl md:text-5xl font-bold mb-4 text-zinc-900 dark:text-zinc-50"
+  >
+    Welcome
+  </h1>
+  <p
+    class="text-lg text-zinc-600 dark:text-zinc-400"
+  >
+    Building the future together
+  </p>
+</div>
+`;
+
+exports[`Hero snapshots > DefaultsToNone matches snapshot 1`] = `
+<h1
+  class="sr-only"
+>
+  Default Hero
+</h1>
+`;
+
+exports[`Hero snapshots > NoneType matches snapshot 1`] = `
+<h1
+  class="sr-only"
+>
+  Page Title
+</h1>
+`;
+
+exports[`Hero snapshots > NullHero matches snapshot 1`] = `
+<h1
+  class="sr-only"
+>
+  Null Hero
+</h1>
+`;
