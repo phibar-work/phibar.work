@@ -12,6 +12,9 @@ const nextConfig = {
     tsconfigPath: './tsconfig.build.json',
   },
   output: 'standalone',
+  experimental: {
+    optimizeCss: true,
+  },
   images: {
     remotePatterns: [
       ...[NEXT_PUBLIC_SERVER_URL /* 'https://example.com' */].map((item) => {
