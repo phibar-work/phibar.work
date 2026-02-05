@@ -62,7 +62,8 @@
       "!**/playwright-report",
       "!**/test-results",
       "!**/next-env.d.ts",
-      "!**/importMap.js"
+      "!**/importMap.js",
+      "!**/coverage"
     ]
   }
 }
