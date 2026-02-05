@@ -1,6 +1,6 @@
 {
   "name": "phibar-work",
-  "version": "1.8.0",
+  "version": "1.10.0",
   "description": "Website template for Payload",
   "license": "MIT",
   "type": "module",
@@ -22,6 +22,9 @@
     "test": "pnpm run test:unit && pnpm run test:storybook",
     "test:unit": "cross-env NODE_OPTIONS=--no-deprecation vitest run --project unit",
     "test:storybook": "cross-env NODE_OPTIONS=--no-deprecation vitest run --project storybook",
+    "test:unit:coverage": "cross-env NODE_OPTIONS=--no-deprecation vitest run --project unit --coverage",
+    "coverage": "pnpm run test:unit:coverage",
+    "coverage:open": "pnpm run coverage && open coverage/index.html",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -101,5 +104,11 @@
       "esbuild",
       "unrs-resolver"
     ]
-  }
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ]
 }

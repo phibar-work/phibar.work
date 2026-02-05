@@ -1,0 +1,100 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`RichText snapshots > Default matches snapshot 1`] = `
+<div
+  class="payload-richtext container mx-auto prose md:prose-md dark:prose-invert"
+>
+  <p>
+    This is a paragraph with 
+    <strong>
+      bold text
+    </strong>
+     and 
+    <em>
+      italic text
+    </em>
+    .
+  </p>
+  <p>
+    Another paragraph of content here.
+  </p>
+</div>
+`;
+
+exports[`RichText snapshots > WithCustomClass matches snapshot 1`] = `
+<div
+  class="payload-richtext container mx-auto prose md:prose-md dark:prose-invert text-lg"
+>
+  <p>
+    This is a paragraph with 
+    <strong>
+      bold text
+    </strong>
+     and 
+    <em>
+      italic text
+    </em>
+    .
+  </p>
+  <p>
+    Another paragraph of content here.
+  </p>
+</div>
+`;
+
+exports[`RichText snapshots > WithInternalDocLink matches snapshot 1`] = `
+<div
+  class="payload-richtext container mx-auto prose md:prose-md dark:prose-invert"
+>
+  <p>
+    Visit our 
+    <a
+      href="/about"
+    >
+      About page
+    </a>
+  </p>
+</div>
+`;
+
+exports[`RichText snapshots > WithoutGutter matches snapshot 1`] = `
+<div
+  class="payload-richtext max-w-none mx-auto prose md:prose-md dark:prose-invert"
+>
+  <p>
+    This is a paragraph with 
+    <strong>
+      bold text
+    </strong>
+     and 
+    <em>
+      italic text
+    </em>
+    .
+  </p>
+  <p>
+    Another paragraph of content here.
+  </p>
+</div>
+`;
+
+exports[`RichText snapshots > WithoutProse matches snapshot 1`] = `
+<div
+  class="payload-richtext container"
+>
+  <p>
+    This is a paragraph with 
+    <strong>
+      bold text
+    </strong>
+     and 
+    <em>
+      italic text
+    </em>
+    .
+  </p>
+  <p>
+    Another paragraph of content here.
+  </p>
+</div>
+`;

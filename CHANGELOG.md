@@ -1,5 +1,32 @@
 # phibar-work
 
+## 1.10.0
+
+### Minor Changes
+
+- Increase test coverage to 100% lines across all files
+
+  - Add stories for uncovered component branches (select separator, reference links, fragment wrapper, internal doc links, empty nav, unknown hero type, banner hero image)
+  - Add unit tests for Theme provider, ThemeSelector, shared utilities, and type validators
+  - Add unit tests for `getURL`, `deepMerge` edge cases, and `generatePreviewPath` null/undefined slugs
+  - Add `HeaderTheme` hook tests detecting dark/light from document classes
+  - Add `storybook-snapshots` utility tests for fallback component name
+  - Mock `next/image` in dedicated unit tests for ImageMedia and BannerHero resource paths
+  - Remove dead `useEffect` suspend handler from VideoMedia
+  - Exclude type-only `Media/types.ts` from coverage reporting
+
+## 1.9.0
+
+### Minor Changes
+
+- Add code coverage with Vitest v8 provider
+
+  - Configure coverage in `vitest.config.mts` with 80% thresholds (lines, functions, statements) and 70% branches
+  - Exclude Next.js app routes, Payload CMS files, admin components, and generated files from coverage
+  - Add `coverage`, `test:unit:coverage`, and `coverage:open` scripts to package.json
+  - Update CI workflow to run coverage and upload HTML report as artifact
+  - Add `coverage/` to `.gitignore`
+
 ## 1.8.0
 
 ### Minor Changes

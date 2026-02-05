@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Logo snapshots > Default matches snapshot 1`] = `
+<img
+  alt="Payload Logo"
+  class="max-w-[9.375rem] w-full h-[34px]"
+  decoding="async"
+  fetchpriority="low"
+  height="34"
+  loading="lazy"
+  src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+  width="193"
+/>
+`;
+
+exports[`Logo snapshots > EagerLoading matches snapshot 1`] = `
+<img
+  alt="Payload Logo"
+  class="max-w-[9.375rem] w-full h-[34px]"
+  decoding="async"
+  fetchpriority="low"
+  height="34"
+  loading="eager"
+  src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+  width="193"
+/>
+`;
+
+exports[`Logo snapshots > HighPriority matches snapshot 1`] = `
+<img
+  alt="Payload Logo"
+  class="max-w-[9.375rem] w-full h-[34px]"
+  decoding="async"
+  fetchpriority="high"
+  height="34"
+  loading="lazy"
+  src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+  width="193"
+/>
+`;
+
+exports[`Logo snapshots > WithCustomClass matches snapshot 1`] = `
+<img
+  alt="Payload Logo"
+  class="max-w-[9.375rem] w-full h-[34px] opacity-50"
+  decoding="async"
+  fetchpriority="low"
+  height="34"
+  loading="lazy"
+  src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+  width="193"
+/>
+`;

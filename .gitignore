@@ -27,5 +27,5 @@ node_modules/
 *storybook.log
 storybook-static
 
-# Test coverage
+# Coverage
 coverage/

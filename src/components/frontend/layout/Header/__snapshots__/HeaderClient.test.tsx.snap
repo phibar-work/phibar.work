@@ -1,0 +1,170 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HeaderClient snapshots > Default matches snapshot 1`] = `
+<header
+  class="sticky top-0 z-20 border-b border-zinc-200 bg-white/80 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-950/80"
+>
+  <div
+    class="container py-4 flex justify-between items-center"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Payload Logo"
+        class="max-w-[9.375rem] w-full h-[34px] invert dark:invert-0"
+        decoding="async"
+        fetchpriority="high"
+        height="34"
+        loading="eager"
+        src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+        width="193"
+      />
+    </a>
+    <nav
+      class="flex gap-3 items-center"
+    >
+      <a
+        class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+        href="/about"
+      >
+        About
+      </a>
+      <a
+        class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+        href="/contact"
+      >
+        Contact
+      </a>
+    </nav>
+  </div>
+</header>
+`;
+
+exports[`HeaderClient snapshots > ManyNavItems matches snapshot 1`] = `
+<header
+  class="sticky top-0 z-20 border-b border-zinc-200 bg-white/80 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-950/80"
+>
+  <div
+    class="container py-4 flex justify-between items-center"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Payload Logo"
+        class="max-w-[9.375rem] w-full h-[34px] invert dark:invert-0"
+        decoding="async"
+        fetchpriority="high"
+        height="34"
+        loading="eager"
+        src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+        width="193"
+      />
+    </a>
+    <nav
+      class="flex gap-3 items-center"
+    >
+      <a
+        class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+        href="/about"
+      >
+        About
+      </a>
+      <a
+        class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+        href="/services"
+      >
+        Services
+      </a>
+      <a
+        class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+        href="/blog"
+      >
+        Blog
+      </a>
+      <a
+        class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+        href="/contact"
+      >
+        Contact
+      </a>
+    </nav>
+  </div>
+</header>
+`;
+
+exports[`HeaderClient snapshots > NoNavItems matches snapshot 1`] = `
+<header
+  class="sticky top-0 z-20 border-b border-zinc-200 bg-white/80 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-950/80"
+>
+  <div
+    class="container py-4 flex justify-between items-center"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Payload Logo"
+        class="max-w-[9.375rem] w-full h-[34px] invert dark:invert-0"
+        decoding="async"
+        fetchpriority="high"
+        height="34"
+        loading="eager"
+        src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+        width="193"
+      />
+    </a>
+    <nav
+      class="flex gap-3 items-center"
+    />
+  </div>
+</header>
+`;
+
+exports[`HeaderClient snapshots > SingleNavItem matches snapshot 1`] = `
+<header
+  class="sticky top-0 z-20 border-b border-zinc-200 bg-white/80 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-950/80"
+>
+  <div
+    class="container py-4 flex justify-between items-center"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Payload Logo"
+        class="max-w-[9.375rem] w-full h-[34px] invert dark:invert-0"
+        decoding="async"
+        fetchpriority="high"
+        height="34"
+        loading="eager"
+        src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+        width="193"
+      />
+    </a>
+    <nav
+      class="flex gap-3 items-center"
+    >
+      <a
+        class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+        href="/"
+      >
+        Home
+      </a>
+    </nav>
+  </div>
+</header>
+`;
