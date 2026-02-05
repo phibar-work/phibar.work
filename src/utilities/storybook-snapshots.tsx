@@ -4,7 +4,7 @@
  * Usage in a component test file:
  *
  * ```ts
- * import { runSnapshotTests } from '@/test/storybook-snapshots'
+ * import { runSnapshotTests } from '@/utilities/storybook-snapshots'
  * import * as stories from './button.stories'
  *
  * runSnapshotTests(stories)
@@ -30,8 +30,9 @@ export function runSnapshotTests(storyModule: StoryModule, name?: string) {
     const stories = composeStories(storyModule as Parameters<typeof composeStories>[0])
 
     for (const [storyName, Story] of Object.entries(stories)) {
+      const StoryComponent = Story as React.ComponentType
       it(`${storyName} matches snapshot`, () => {
-        const { container } = render(<Story />)
+        const { container } = render(<StoryComponent />)
         expect(container.firstChild).toMatchSnapshot()
       })
     }

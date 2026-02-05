@@ -1,16 +1,11 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist } from 'next/font/google'
 import { draftMode } from 'next/headers'
 import Script from 'next/script'
 
 const geistSans = Geist({
   subsets: ['latin'],
   variable: '--font-geist-sans',
-})
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  variable: '--font-geist-mono',
 })
 
 import type React from 'react'
@@ -20,7 +15,6 @@ import { Header } from '@/components/frontend/layout/Header'
 import { Providers } from '@/components/frontend/providers'
 import { InitTheme } from '@/components/frontend/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
-import { cn } from '@/utilities/ui'
 
 import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
@@ -29,7 +23,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const { isEnabled } = await draftMode()
 
   return (
-    <html className={cn(geistSans.variable, geistMono.variable)} lang="en" suppressHydrationWarning>
+    <html className={geistSans.variable} lang="en" suppressHydrationWarning>
       <head>
         <InitTheme />
         <link href="/favicon.ico" rel="icon" sizes="32x32" />
