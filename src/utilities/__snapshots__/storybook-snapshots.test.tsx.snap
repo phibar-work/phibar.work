@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Component snapshots > Default matches snapshot 1`] = `
+<div>
+  Default story
+</div>
+`;
+
+exports[`CustomName snapshots > Default matches snapshot 1`] = `
+<div>
+  Default story
+</div>
+`;

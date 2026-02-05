@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NoneHero snapshots > Default matches snapshot 1`] = `
+<h1
+  class="sr-only"
+>
+  Page Title
+</h1>
+`;
+
+exports[`NoneHero snapshots > LongTitle matches snapshot 1`] = `
+<h1
+  class="sr-only"
+>
+  This is a much longer page title that might wrap on smaller screens
+</h1>
+`;
