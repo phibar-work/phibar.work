@@ -13,7 +13,7 @@ const nextConfig = {
   },
   output: 'standalone',
   experimental: {
-    optimizeCss: true,
+    inlineCss: true,
   },
   images: {
     remotePatterns: [
