@@ -36,7 +36,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <Footer />
         </Providers>
         <Script
-          src="/api/script.js"
+          src="/rybbit.js"
           data-site-id={process.env.NEXT_PUBLIC_RYBBIT_SITE_ID}
           strategy="afterInteractive"
         />

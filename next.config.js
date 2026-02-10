@@ -42,7 +42,7 @@ const nextConfig = {
     return [
       {
         // Static assets - long cache (1 year)
-        source: '/:path*.(svg|ico|png|jpg|jpeg|gif|webp|woff|woff2)',
+        source: '/:path*.(svg|ico|png|jpg|jpeg|gif|webp|woff|woff2|js)',
         headers: [
           {
             key: 'Cache-Control',
@@ -85,10 +85,10 @@ const nextConfig = {
     const rybbitHost = process.env.NEXT_PUBLIC_RYBBIT_HOST || 'https://rybbit.phibar.work'
     return {
       beforeFiles: [
-        // Rybbit analytics - forward all matching paths
+        // Rybbit analytics - forward tracking paths (script.js is hosted locally)
         {
-          source: '/api/:path(script|replay).js',
-          destination: `${rybbitHost}/api/:path.js`,
+          source: '/api/replay.js',
+          destination: `${rybbitHost}/api/replay.js`,
         },
         {
           source: '/api/track',
