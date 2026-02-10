@@ -26,7 +26,9 @@
     "coverage": "pnpm run test:unit:coverage",
     "coverage:open": "pnpm run coverage && open coverage/index.html",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lighthouse": "lhci autorun",
+    "lighthouse:local": "lhci autorun --collect.url=http://localhost:3000/"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.975.0",
@@ -66,6 +68,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.3.12",
     "@changesets/cli": "^2.29.8",
+    "@lhci/cli": "^0.15.1",
     "@playwright/test": "1.58.0",
     "@storybook/addon-a11y": "^10.2.1",
     "@storybook/addon-docs": "^10.2.1",
