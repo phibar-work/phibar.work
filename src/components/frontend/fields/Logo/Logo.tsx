@@ -10,7 +10,7 @@ export const Logo = (props: Props) => {
   const { loading: loadingFromProps, priority: priorityFromProps, className } = props
 
   const loading = loadingFromProps || 'eager'
-  const priority = priorityFromProps || 'auto'
+  const priority = priorityFromProps || 'high'
 
   return (
     /* eslint-disable @next/next/no-img-element */
