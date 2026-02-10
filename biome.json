@@ -63,7 +63,20 @@
       "!**/test-results",
       "!**/next-env.d.ts",
       "!**/importMap.js",
-      "!**/coverage"
+      "!**/coverage",
+      "!**/public/rybbit.js"
     ]
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.test.tsx", "**/*.test.ts", "**/*.stories.tsx"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noExplicitAny": "off"
+          }
+        }
+      }
+    }
+  ]
 }

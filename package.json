@@ -1,6 +1,6 @@
 {
   "name": "phibar-work",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "packageManager": "pnpm@10.28.1",
   "description": "Website template for Payload",
   "license": "MIT",
