@@ -41,6 +41,16 @@ const nextConfig = {
   async headers() {
     return [
       {
+        // Static assets - long cache (1 year)
+        source: '/:path*.(svg|ico|png|jpg|jpeg|gif|webp|woff|woff2)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
         source: '/(.*)',
         headers: [
           {
