@@ -35,10 +35,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <main>{children}</main>
           <Footer />
         </Providers>
-        <Script
-          id="deployment-info"
-          strategy="beforeInteractive"
-        >
+        <Script id="deployment-info" strategy="beforeInteractive">
           {`console.log('%c[Deployment Info]', 'color: #00ff00; font-weight: bold', {
   version: '1.11.0',
   rybbitSiteId: '${process.env.NEXT_PUBLIC_RYBBIT_SITE_ID || 'NOT_SET'}',
