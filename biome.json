@@ -63,8 +63,7 @@
       "!**/test-results",
       "!**/next-env.d.ts",
       "!**/importMap.js",
-      "!**/coverage",
-      "!**/public/rybbit.js"
+      "!**/coverage"
     ]
   },
   "overrides": [

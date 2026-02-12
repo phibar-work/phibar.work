@@ -45,6 +45,7 @@ const nextConfig = {
   reactStrictMode: true,
   redirects,
   async headers() {
+    const rybbitHost = process.env.NEXT_PUBLIC_RYBBIT_HOST || 'https://rybbit.phibar.work'
     return [
       {
         // Static assets - long cache (1 year)
@@ -63,7 +64,7 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+              `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${rybbitHost}`,
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: blob: https:",
               "font-src 'self' data:",
@@ -91,7 +92,7 @@ const nextConfig = {
     const rybbitHost = process.env.NEXT_PUBLIC_RYBBIT_HOST || 'https://rybbit.phibar.work'
     return {
       beforeFiles: [
-        // Rybbit analytics - forward tracking paths (script.js is hosted locally)
+        // Rybbit analytics - forward tracking paths
         {
           source: '/api/replay.js',
           destination: `${rybbitHost}/api/replay.js`,
