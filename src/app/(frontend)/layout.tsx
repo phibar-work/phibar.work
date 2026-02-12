@@ -36,6 +36,17 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <Footer />
         </Providers>
         <Script
+          id="deployment-info"
+          strategy="beforeInteractive"
+        >
+          {`console.log('%c[Deployment Info]', 'color: #00ff00; font-weight: bold', {
+  version: '1.11.0',
+  rybbitSiteId: '${process.env.NEXT_PUBLIC_RYBBIT_SITE_ID || 'NOT_SET'}',
+  rybbitHost: '${process.env.NEXT_PUBLIC_RYBBIT_HOST || 'NOT_SET'}',
+  timestamp: new Date().toISOString()
+});`}
+        </Script>
+        <Script
           src={`${process.env.NEXT_PUBLIC_RYBBIT_HOST || 'https://rybbit.phibar.work'}/api/script.js`}
           data-site-id={process.env.NEXT_PUBLIC_RYBBIT_SITE_ID}
           defer
