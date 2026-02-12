@@ -17,7 +17,7 @@ exports[`HeaderClient snapshots > Default matches snapshot 1`] = `
         fetchpriority="high"
         height="34"
         loading="eager"
-        src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+        src="/payload-logo-light.svg"
         width="193"
       />
     </a>
@@ -64,7 +64,7 @@ exports[`HeaderClient snapshots > ManyNavItems matches snapshot 1`] = `
         fetchpriority="high"
         height="34"
         loading="eager"
-        src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+        src="/payload-logo-light.svg"
         width="193"
       />
     </a>
@@ -123,7 +123,7 @@ exports[`HeaderClient snapshots > NoNavItems matches snapshot 1`] = `
         fetchpriority="high"
         height="34"
         loading="eager"
-        src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+        src="/payload-logo-light.svg"
         width="193"
       />
     </a>
@@ -151,7 +151,7 @@ exports[`HeaderClient snapshots > SingleNavItem matches snapshot 1`] = `
         fetchpriority="high"
         height="34"
         loading="eager"
-        src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+        src="/payload-logo-light.svg"
         width="193"
       />
     </a>

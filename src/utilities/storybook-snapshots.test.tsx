@@ -1,4 +1,3 @@
-import { describe, expect, it } from 'vitest'
 import { runSnapshotTests } from './storybook-snapshots'
 
 // Test the fallback component name when meta.title is undefined

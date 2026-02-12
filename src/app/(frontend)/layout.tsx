@@ -1,17 +1,6 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import { draftMode } from 'next/headers'
 import Script from 'next/script'
-
-const geistSans = Geist({
-  subsets: ['latin'],
-  variable: '--font-geist-sans',
-})
-
-const geistMono = Geist_Mono({
-  subsets: ['latin'],
-  variable: '--font-geist-mono',
-})
 
 import type React from 'react'
 import { AdminBar } from '@/components/frontend/layout/AdminBar'
@@ -20,7 +9,6 @@ import { Header } from '@/components/frontend/layout/Header'
 import { Providers } from '@/components/frontend/providers'
 import { InitTheme } from '@/components/frontend/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
-import { cn } from '@/utilities/ui'
 
 import './globals.css'
 import { getServerSideURL } from '@/utilities/getURL'
@@ -29,7 +17,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   const { isEnabled } = await draftMode()
 
   return (
-    <html className={cn(geistSans.variable, geistMono.variable)} lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <InitTheme />
         <link href="/favicon.ico" rel="icon" sizes="32x32" />
@@ -47,10 +35,18 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <main>{children}</main>
           <Footer />
         </Providers>
+        <Script id="deployment-info" strategy="beforeInteractive">
+          {`console.log('%c[Deployment Info]', 'color: #00ff00; font-weight: bold', {
+  version: '1.11.0',
+  rybbitSiteId: '${process.env.NEXT_PUBLIC_RYBBIT_SITE_ID || 'NOT_SET'}',
+  rybbitHost: '${process.env.NEXT_PUBLIC_RYBBIT_HOST || 'NOT_SET'}',
+  timestamp: new Date().toISOString()
+});`}
+        </Script>
         <Script
-          src="/api/script.js"
+          src={`${process.env.NEXT_PUBLIC_RYBBIT_HOST || 'https://rybbit.phibar.work'}/api/script.js`}
           data-site-id={process.env.NEXT_PUBLIC_RYBBIT_SITE_ID}
-          strategy="afterInteractive"
+          defer
         />
       </body>
     </html>

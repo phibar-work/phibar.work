@@ -34,6 +34,7 @@ export const sections: ArrayField = {
       name: 'headline',
       type: 'text',
       required: true,
+      minLength: 1,
     },
     {
       name: 'sectionId',

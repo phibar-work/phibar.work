@@ -65,5 +65,17 @@
       "!**/importMap.js",
       "!**/coverage"
     ]
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["**/*.test.tsx", "**/*.test.ts", "**/*.stories.tsx"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noExplicitAny": "off"
+          }
+        }
+      }
+    }
+  ]
 }
