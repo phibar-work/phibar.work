@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { CMSLink } from '@/components/frontend/fields/Link'
 import { Logo } from '@/components/frontend/fields/Logo/Logo'
-import { ThemeSelector } from '@/components/frontend/providers/Theme/ThemeSelector'
+import { LazyThemeSelector } from '@/components/frontend/providers/Theme/ThemeSelector/LazyThemeSelector'
 import type { Footer as FooterData } from '@/payload-types'
 import { getCachedGlobal } from '@/utilities/getGlobals'
 
@@ -19,7 +19,7 @@ export async function Footer() {
         </Link>
 
         <div className="flex flex-col-reverse items-start md:flex-row gap-4 md:items-center">
-          <ThemeSelector />
+          <LazyThemeSelector />
           <nav className="flex flex-col md:flex-row gap-4">
             {navItems.map(({ link }) => {
               return (

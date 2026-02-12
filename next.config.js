@@ -1,6 +1,11 @@
+import bundleAnalyzer from '@next/bundle-analyzer'
 import { withPayload } from '@payloadcms/next/withPayload'
 
 import redirects from './redirects.js'
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 const NEXT_PUBLIC_SERVER_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
@@ -14,6 +19,7 @@ const nextConfig = {
   output: 'standalone',
   experimental: {
     inlineCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-select'],
   },
   images: {
     remotePatterns: [
@@ -109,4 +115,4 @@ const nextConfig = {
   },
 }
 
-export default withPayload(nextConfig, { devBundleServerPackages: false })
+export default withBundleAnalyzer(withPayload(nextConfig, { devBundleServerPackages: false }))
