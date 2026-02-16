@@ -9,12 +9,12 @@ interface Props {
 export const Logo = (props: Props) => {
   const { loading: loadingFromProps, priority: priorityFromProps, className } = props
 
-  const loading = loadingFromProps || 'lazy'
-  const priority = priorityFromProps || 'low'
+  const loading = loadingFromProps || 'eager'
+  const priority = priorityFromProps || 'high'
 
   return (
     /* eslint-disable @next/next/no-img-element */
-    // biome-ignore lint/performance/noImgElement: external SVG from GitHub, Next.js Image not suitable
+    // biome-ignore lint/performance/noImgElement: SVG element, Next.js Image not suitable
     <img
       alt="Payload Logo"
       width={193}
@@ -23,7 +23,7 @@ export const Logo = (props: Props) => {
       fetchPriority={priority}
       decoding="async"
       className={clsx('max-w-[9.375rem] w-full h-[34px]', className)}
-      src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-logo-light.svg"
+      src="/payload-logo-light.svg"
     />
   )
 }
