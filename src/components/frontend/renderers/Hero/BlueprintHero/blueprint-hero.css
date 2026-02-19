@@ -1,0 +1,263 @@
+/* ============================================
+   Blueprint Hero - Animation Definitions
+   ============================================ */
+
+/* --- Blueprint grid background pattern --- */
+.blueprint-grid {
+  background-image:
+    linear-gradient(rgba(6, 182, 212, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.15) 1px, transparent 1px),
+    linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+  background-size:
+    100px 100px,
+    100px 100px,
+    20px 20px,
+    20px 20px;
+}
+
+/* --- Base SVG line style --- */
+.blueprint-line {
+  stroke: rgb(34, 211, 238); /* cyan-400 */
+  color: rgb(34, 211, 238);
+}
+
+/* --- SVG stroke-dashoffset draw animation --- */
+@keyframes blueprint-draw {
+  from {
+    stroke-dashoffset: 2000;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* SVG text fade-in (no stroke-dash needed) */
+@keyframes blueprint-text-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 18 stagger groups spread over ~5s: shape then label */
+/* fill-mode: both ensures opacity:0 from keyframe applies during delay (hides markers) */
+/* 1-2: VPC */
+.blueprint-draw-1  { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: blueprint-draw 1.0s ease-out 0.0s both; }
+.blueprint-draw-2  { opacity: 0; animation: blueprint-text-appear 0.4s ease-out 0.4s both; }
+/* 3-4: Public subnet */
+.blueprint-draw-3  { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: blueprint-draw 0.8s ease-out 0.6s both; }
+.blueprint-draw-4  { opacity: 0; animation: blueprint-text-appear 0.4s ease-out 0.9s both; }
+/* 5-6: ALB */
+.blueprint-draw-5  { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: blueprint-draw 0.7s ease-out 1.1s both; }
+.blueprint-draw-6  { opacity: 0; animation: blueprint-text-appear 0.4s ease-out 1.4s both; }
+/* 7-8: Private subnet */
+.blueprint-draw-7  { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: blueprint-draw 0.8s ease-out 1.6s both; }
+.blueprint-draw-8  { opacity: 0; animation: blueprint-text-appear 0.4s ease-out 1.9s both; }
+/* 9-10: ECS Cluster */
+.blueprint-draw-9  { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: blueprint-draw 0.7s ease-out 2.1s both; }
+.blueprint-draw-10 { opacity: 0; animation: blueprint-text-appear 0.4s ease-out 2.4s both; }
+/* 11-12: ECS Tasks */
+.blueprint-draw-11 { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: blueprint-draw 0.6s ease-out 2.6s both; }
+.blueprint-draw-12 { opacity: 0; animation: blueprint-text-appear 0.3s ease-out 2.9s both; }
+/* 13-14: RDS + API Gateway shapes → labels */
+.blueprint-draw-13 { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: blueprint-draw 0.7s ease-out 3.1s both; }
+.blueprint-draw-14 { opacity: 0; animation: blueprint-text-appear 0.4s ease-out 3.4s both; }
+/* 15-16: Right-side services + SQS shapes → labels */
+.blueprint-draw-15 { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: blueprint-draw 0.6s ease-out 3.7s both; }
+.blueprint-draw-16 { opacity: 0; animation: blueprint-text-appear 0.3s ease-out 4.0s both; }
+/* 17-18: Connection arrows */
+.blueprint-draw-17 { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: blueprint-draw 0.5s ease-out 4.3s both; }
+.blueprint-draw-18 { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: blueprint-draw 0.5s ease-out 4.6s both; }
+
+/* --- Architecture fade out (simple opacity, no blur) --- */
+@keyframes blueprint-fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.blueprint-fadeout {
+  animation: blueprint-fadeout 1.5s ease-in forwards;
+}
+
+/* --- Typing cursor blink --- */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typing-cursor {
+  animation: cursor-blink 0.8s step-end infinite;
+  color: rgb(34, 211, 238);
+  font-weight: bold;
+}
+
+/* --- Code block crossfade transitions --- */
+@keyframes code-block-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes code-block-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+
+.code-block-fade-in {
+  animation: code-block-in 1s ease-out forwards;
+}
+
+.code-block-fade-out {
+  animation: code-block-out 1s ease-in forwards;
+}
+
+/* --- Code line reveal (staggered per line) --- */
+@keyframes code-line-appear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.code-line-reveal {
+  opacity: 0;
+}
+
+.code-line-visible {
+  animation: code-line-appear 0.5s ease-out forwards;
+  animation-delay: var(--line-delay, 0s);
+}
+
+/* --- Text overlay animations (used in reveal phase) --- */
+@keyframes hero-glow {
+  0%, 100% {
+    text-shadow:
+      0 0 20px rgba(6, 182, 212, 0.3),
+      0 0 40px rgba(6, 182, 212, 0.1);
+  }
+  50% {
+    text-shadow:
+      0 0 30px rgba(6, 182, 212, 0.5),
+      0 0 60px rgba(6, 182, 212, 0.2);
+  }
+}
+
+.hero-text-glow {
+  animation: hero-glow 4s ease-in-out infinite;
+  text-shadow:
+    0 0 20px rgba(6, 182, 212, 0.3),
+    0 0 40px rgba(6, 182, 212, 0.1);
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-fade-in {
+  animation: hero-fade-in 1.2s ease-out both;
+}
+
+.hero-fade-in-sub {
+  animation: hero-fade-in 1.2s ease-out 0.3s both;
+}
+
+/* --- Playback pause state --- */
+.hero-paused * {
+  animation-play-state: paused !important;
+}
+
+/* --- Playback control buttons --- */
+.hero-control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(34, 211, 238, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.hero-control-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: rgb(34, 211, 238);
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .blueprint-draw-1, .blueprint-draw-2, .blueprint-draw-3,
+  .blueprint-draw-4, .blueprint-draw-5, .blueprint-draw-6,
+  .blueprint-draw-7, .blueprint-draw-8, .blueprint-draw-9,
+  .blueprint-draw-10, .blueprint-draw-11, .blueprint-draw-12,
+  .blueprint-draw-13, .blueprint-draw-14, .blueprint-draw-15,
+  .blueprint-draw-16, .blueprint-draw-17, .blueprint-draw-18 {
+    animation: none;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  .blueprint-fadeout {
+    animation: none;
+  }
+
+  .code-block-fade-in,
+  .code-block-fade-out {
+    animation: none;
+  }
+
+  .code-line-reveal {
+    opacity: 1;
+  }
+
+  .code-line-visible {
+    animation: none;
+    opacity: 1;
+  }
+
+  .typing-cursor {
+    animation: none;
+    opacity: 1;
+  }
+
+  .hero-text-glow {
+    animation: none;
+  }
+
+  .hero-fade-in,
+  .hero-fade-in-sub {
+    animation: none;
+    opacity: 1;
+  }
+}
