@@ -53,7 +53,7 @@ export function TypeWriter({ text, active, fading, paused, speed = 25 }: TypeWri
   return (
     <div
       className={cn(
-        'font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8',
+        'font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8',
         fading && 'code-block-fade-out',
       )}
       aria-hidden="true"

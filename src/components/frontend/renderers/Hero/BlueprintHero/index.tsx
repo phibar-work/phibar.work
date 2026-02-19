@@ -47,8 +47,9 @@ const reactCode = `export default function Hero() {
   return (
     <section>
       <h1>Software architect, married to AI.</h1>
-      <p>I design, build, and ship
-        \u2014 without the overhead of ten people.</p>
+      <p>From whiteboard to production
+        \u2014 we plan it, I build it,
+        no overhead of ten people.</p>
     </section>
   )
 }`
@@ -61,7 +62,7 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
 
   const headline = hero?.headline || 'Software architect, married to AI.'
   const subline =
-    hero?.subline || 'I design, build, and ship \u2014 without the overhead of ten people.'
+    hero?.subline || 'From whiteboard to production \u2014 we plan it, I build it, no overhead of ten people.'
 
   const elapsedRef = useRef(0)
   const resumedAtRef = useRef(Date.now())
@@ -143,7 +144,7 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
           className={cn(
             'absolute inset-0 flex items-center justify-center',
             archFading && 'blueprint-fadeout',
-            !archVisible && !archFading && 'opacity-0',
+            !archVisible && !archFading && 'opacity-0 pointer-events-none',
           )}
         >
           <BlueprintSvg phase={phase} />
@@ -154,6 +155,7 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
           className={cn(
             'absolute inset-0 flex items-center justify-center',
             !tfActive && !tfFading && 'opacity-0',
+            !tfActive && 'pointer-events-none',
           )}
         >
           <TypeWriter text={terraformCode} active={tfActive} fading={tfFading} paused={paused} />
@@ -164,6 +166,7 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
           className={cn(
             'absolute inset-0 flex items-center justify-center',
             !consoleActive && !consoleFading && 'opacity-0',
+            !consoleActive && 'pointer-events-none',
           )}
         >
           <TypeWriter
@@ -179,6 +182,7 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
           className={cn(
             'absolute inset-0 flex items-center justify-center',
             !reactActive && !reactFading && 'opacity-0',
+            !reactActive && 'pointer-events-none',
           )}
         >
           <TypeWriter text={reactCode} active={reactActive} fading={reactFading} paused={paused} />
@@ -188,7 +192,7 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
         <div
           className={cn(
             'relative z-10 flex flex-col items-center justify-center h-full text-center px-6',
-            !textVisible && 'opacity-0',
+            !textVisible && 'opacity-0 pointer-events-none',
           )}
         >
           <h1

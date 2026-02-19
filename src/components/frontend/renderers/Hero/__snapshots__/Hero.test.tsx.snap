@@ -463,11 +463,11 @@ exports[`Hero snapshots > BlueprintType matches snapshot 1`] = `
       </svg>
     </div>
     <div
-      class="absolute inset-0 flex items-center justify-center opacity-0"
+      class="absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none"
     >
       <div
         aria-hidden="true"
-        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8"
+        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8"
       >
         <pre
           class="leading-relaxed whitespace-pre-wrap"
@@ -475,11 +475,11 @@ exports[`Hero snapshots > BlueprintType matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="absolute inset-0 flex items-center justify-center opacity-0"
+      class="absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none"
     >
       <div
         aria-hidden="true"
-        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8"
+        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8"
       >
         <pre
           class="leading-relaxed whitespace-pre-wrap"
@@ -487,11 +487,11 @@ exports[`Hero snapshots > BlueprintType matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="absolute inset-0 flex items-center justify-center opacity-0"
+      class="absolute inset-0 flex items-center justify-center opacity-0 pointer-events-none"
     >
       <div
         aria-hidden="true"
-        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8"
+        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8"
       >
         <pre
           class="leading-relaxed whitespace-pre-wrap"
@@ -499,7 +499,7 @@ exports[`Hero snapshots > BlueprintType matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 opacity-0"
+      class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 opacity-0 pointer-events-none"
     >
       <h1
         class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white max-w-4xl leading-tight"
@@ -509,7 +509,7 @@ exports[`Hero snapshots > BlueprintType matches snapshot 1`] = `
       <p
         class="mt-6 text-lg sm:text-xl md:text-2xl text-cyan-100/80 max-w-2xl"
       >
-        I design, build, and ship — without the overhead of ten people.
+        From whiteboard to production — we plan it, I build it, no overhead of ten people.
       </p>
     </div>
     <div
@@ -517,7 +517,7 @@ exports[`Hero snapshots > BlueprintType matches snapshot 1`] = `
     />
   </div>
   <div
-    class="absolute bottom-10 right-6 z-20 flex items-center gap-1.5"
+    class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5"
   >
     <button
       aria-label="Pause animation"
