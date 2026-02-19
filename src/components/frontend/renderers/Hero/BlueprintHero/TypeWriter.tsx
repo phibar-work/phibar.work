@@ -7,17 +7,31 @@ interface TypeWriterProps {
   text: string
   active: boolean
   fading?: boolean
+  paused?: boolean
   speed?: number
 }
 
-export function TypeWriter({ text, active, fading, speed = 25 }: TypeWriterProps) {
+export function TypeWriter({ text, active, fading, paused, speed = 25 }: TypeWriterProps) {
   const [charIndex, setCharIndex] = useState(0)
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
+  // Reset to 0 when becoming freshly active
   useEffect(() => {
-    if (!active || fading) return
+    if (active && !fading) {
+      setCharIndex(0)
+    }
+  }, [active, fading])
 
-    setCharIndex(0)
+  // Manage typing interval — stops on pause, resumes from current position
+  useEffect(() => {
+    if (!active || fading || paused) {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+        intervalRef.current = null
+      }
+      return
+    }
+
     intervalRef.current = setInterval(() => {
       setCharIndex((prev) => {
         if (prev >= text.length) {
@@ -31,10 +45,10 @@ export function TypeWriter({ text, active, fading, speed = 25 }: TypeWriterProps
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current)
     }
-  }, [active, fading, text, speed])
+  }, [active, fading, paused, text, speed])
 
   const displayedText = active ? text.substring(0, charIndex) : ''
-  const showCursor = active && !fading
+  const showCursor = active && !fading && !paused
 
   return (
     <div

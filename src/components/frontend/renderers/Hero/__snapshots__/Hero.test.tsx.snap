@@ -23,495 +23,563 @@ exports[`Hero snapshots > BlueprintType matches snapshot 1`] = `
   class="relative w-full h-screen overflow-hidden bg-slate-950"
 >
   <div
-    class="absolute inset-0 blueprint-grid opacity-20"
-  />
-  <div
-    class="absolute inset-0 flex items-center justify-center"
+    class="absolute inset-0"
   >
-    <svg
-      aria-hidden="true"
-      class="w-full max-w-5xl h-auto"
-      role="presentation"
-      viewBox="0 0 1000 600"
+    <div
+      class="absolute inset-0 blueprint-grid opacity-20"
+    />
+    <div
+      class="absolute inset-0 flex items-center justify-center"
     >
-      <rect
-        class="blueprint-line blueprint-draw-1"
-        fill="none"
-        height="520"
-        rx="6"
-        stroke-width="2"
-        width="420"
-        x="40"
-        y="40"
-      />
-      <text
-        class="blueprint-line blueprint-draw-2"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="13"
-        stroke="none"
-        x="60"
-        y="72"
+      <svg
+        aria-hidden="true"
+        class="w-full max-w-5xl h-auto"
+        role="presentation"
+        viewBox="0 0 1000 600"
       >
-        VPC 10.0.0.0/16
-      </text>
-      <rect
-        class="blueprint-line blueprint-draw-3"
-        fill="none"
-        height="120"
-        rx="4"
-        stroke-dasharray="6 3"
-        stroke-width="1"
-        width="380"
-        x="60"
-        y="90"
-      />
-      <text
-        class="blueprint-line blueprint-draw-4"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="10"
-        opacity="0.7"
-        stroke="none"
-        x="75"
-        y="112"
-      >
-        Public Subnet 10.0.1.0/24
-      </text>
-      <rect
-        class="blueprint-line blueprint-draw-5"
-        fill="none"
-        height="60"
-        rx="4"
-        stroke-width="1.5"
-        width="180"
-        x="160"
-        y="125"
-      />
-      <text
-        class="blueprint-line blueprint-draw-6"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="12"
-        stroke="none"
-        text-anchor="middle"
-        x="250"
-        y="162"
-      >
-        ALB
-      </text>
-      <rect
-        class="blueprint-line blueprint-draw-7"
-        fill="none"
-        height="200"
-        rx="4"
-        stroke-dasharray="6 3"
-        stroke-width="1"
-        width="380"
-        x="60"
-        y="230"
-      />
-      <text
-        class="blueprint-line blueprint-draw-8"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="10"
-        opacity="0.7"
-        stroke="none"
-        x="75"
-        y="252"
-      >
-        Private Subnet 10.0.2.0/24
-      </text>
-      <rect
-        class="blueprint-line blueprint-draw-9"
-        fill="none"
-        height="100"
-        opacity="0.6"
-        rx="3"
-        stroke-width="1"
-        width="340"
-        x="80"
-        y="265"
-      />
-      <text
-        class="blueprint-line blueprint-draw-10"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="9"
-        opacity="0.6"
-        stroke="none"
-        x="95"
-        y="282"
-      >
-        ECS Cluster
-      </text>
-      <rect
-        class="blueprint-line blueprint-draw-11"
-        fill="none"
-        height="55"
-        rx="3"
-        stroke-width="1.5"
-        width="90"
-        x="95"
-        y="290"
-      />
-      <rect
-        class="blueprint-line blueprint-draw-11"
-        fill="none"
-        height="55"
-        rx="3"
-        stroke-width="1.5"
-        width="90"
-        x="205"
-        y="290"
-      />
-      <rect
-        class="blueprint-line blueprint-draw-11"
-        fill="none"
-        height="55"
-        rx="3"
-        stroke-width="1.5"
-        width="90"
-        x="315"
-        y="290"
-      />
-      <text
-        class="blueprint-line blueprint-draw-12"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="10"
-        stroke="none"
-        text-anchor="middle"
-        x="140"
-        y="322"
-      >
-        Task: API
-      </text>
-      <text
-        class="blueprint-line blueprint-draw-12"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="10"
-        stroke="none"
-        text-anchor="middle"
-        x="250"
-        y="322"
-      >
-        Task: Web
-      </text>
-      <text
-        class="blueprint-line blueprint-draw-12"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="10"
-        stroke="none"
-        text-anchor="middle"
-        x="360"
-        y="322"
-      >
-        Task: Worker
-      </text>
-      <ellipse
-        class="blueprint-line blueprint-draw-13"
-        cx="250"
-        cy="455"
-        fill="none"
-        rx="70"
-        ry="14"
-        stroke-width="1.5"
-      />
-      <line
-        class="blueprint-line blueprint-draw-13"
-        stroke-width="1.5"
-        x1="180"
-        x2="180"
-        y1="455"
-        y2="495"
-      />
-      <line
-        class="blueprint-line blueprint-draw-13"
-        stroke-width="1.5"
-        x1="320"
-        x2="320"
-        y1="455"
-        y2="495"
-      />
-      <ellipse
-        class="blueprint-line blueprint-draw-13"
-        cx="250"
-        cy="495"
-        fill="none"
-        rx="70"
-        ry="14"
-        stroke-width="1.5"
-      />
-      <text
-        class="blueprint-line blueprint-draw-14"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="11"
-        stroke="none"
-        text-anchor="middle"
-        x="250"
-        y="480"
-      >
-        RDS Postgres
-      </text>
-      <rect
-        class="blueprint-line blueprint-draw-13"
-        fill="none"
-        height="55"
-        rx="4"
-        stroke-width="1.5"
-        width="160"
-        x="560"
-        y="90"
-      />
-      <text
-        class="blueprint-line blueprint-draw-14"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="12"
-        stroke="none"
-        text-anchor="middle"
-        x="640"
-        y="123"
-      >
-        API Gateway
-      </text>
-      <rect
-        class="blueprint-line blueprint-draw-15"
-        fill="none"
-        height="50"
-        rx="3"
-        stroke-width="1.5"
-        width="100"
-        x="540"
-        y="200"
-      />
-      <rect
-        class="blueprint-line blueprint-draw-15"
-        fill="none"
-        height="50"
-        rx="3"
-        stroke-width="1.5"
-        width="100"
-        x="660"
-        y="200"
-      />
-      <rect
-        class="blueprint-line blueprint-draw-15"
-        fill="none"
-        height="50"
-        rx="3"
-        stroke-width="1.5"
-        width="100"
-        x="780"
-        y="200"
-      />
-      <text
-        class="blueprint-line blueprint-draw-16"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="11"
-        stroke="none"
-        text-anchor="middle"
-        x="590"
-        y="230"
-      >
-        Auth
-      </text>
-      <text
-        class="blueprint-line blueprint-draw-16"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="11"
-        stroke="none"
-        text-anchor="middle"
-        x="710"
-        y="230"
-      >
-        Core
-      </text>
-      <text
-        class="blueprint-line blueprint-draw-16"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="11"
-        stroke="none"
-        text-anchor="middle"
-        x="830"
-        y="230"
-      >
-        Search
-      </text>
-      <rect
-        class="blueprint-line blueprint-draw-15"
-        fill="none"
-        height="45"
-        rx="4"
-        stroke-dasharray="4 2"
-        stroke-width="1"
-        width="200"
-        x="600"
-        y="310"
-      />
-      <text
-        class="blueprint-line blueprint-draw-16"
-        fill="currentColor"
-        font-family="monospace"
-        font-size="10"
-        stroke="none"
-        text-anchor="middle"
-        x="700"
-        y="338"
-      >
-        SQS / EventBridge
-      </text>
-      <line
-        class="blueprint-line blueprint-draw-17"
-        marker-end="url(#arrowhead)"
-        stroke-width="1"
-        x1="250"
-        x2="250"
-        y1="185"
-        y2="265"
-      />
-      <line
-        class="blueprint-line blueprint-draw-17"
-        marker-end="url(#arrowhead)"
-        stroke-width="1"
-        x1="250"
-        x2="250"
-        y1="365"
-        y2="440"
-      />
-      <line
-        class="blueprint-line blueprint-draw-17"
-        marker-end="url(#arrowhead)"
-        stroke-width="1"
-        x1="600"
-        x2="590"
-        y1="145"
-        y2="200"
-      />
-      <line
-        class="blueprint-line blueprint-draw-17"
-        marker-end="url(#arrowhead)"
-        stroke-width="1"
-        x1="640"
-        x2="710"
-        y1="145"
-        y2="200"
-      />
-      <line
-        class="blueprint-line blueprint-draw-18"
-        marker-end="url(#arrowhead)"
-        stroke-width="1"
-        x1="700"
-        x2="830"
-        y1="145"
-        y2="200"
-      />
-      <line
-        class="blueprint-line blueprint-draw-18"
-        marker-end="url(#arrowhead)"
-        stroke-width="1"
-        x1="590"
-        x2="650"
-        y1="250"
-        y2="310"
-      />
-      <line
-        class="blueprint-line blueprint-draw-18"
-        marker-end="url(#arrowhead)"
-        stroke-width="1"
-        x1="710"
-        x2="700"
-        y1="250"
-        y2="310"
-      />
-      <line
-        class="blueprint-line blueprint-draw-18"
-        marker-end="url(#arrowhead)"
-        stroke-dasharray="8 4"
-        stroke-width="1.5"
-        x1="460"
-        x2="560"
-        y1="155"
-        y2="117"
-      />
-      <defs>
-        <marker
-          id="arrowhead"
-          markerHeight="6"
-          markerWidth="8"
-          orient="auto"
-          refX="8"
-          refY="3"
+        <rect
+          class="blueprint-line blueprint-draw-1"
+          fill="none"
+          height="520"
+          rx="6"
+          stroke-width="2"
+          width="420"
+          x="40"
+          y="40"
+        />
+        <text
+          class="blueprint-line blueprint-draw-2"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="13"
+          stroke="none"
+          x="60"
+          y="72"
         >
-          <path
-            d="M 0 0 L 8 3 L 0 6 Z"
-            fill="rgb(34, 211, 238)"
-          />
-        </marker>
-      </defs>
-    </svg>
-  </div>
-  <div
-    class="absolute inset-0 flex items-center justify-center opacity-0"
-  >
-    <div
-      aria-hidden="true"
-      class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8"
-    >
-      <pre
-        class="leading-relaxed whitespace-pre-wrap"
-      />
+          VPC 10.0.0.0/16
+        </text>
+        <rect
+          class="blueprint-line blueprint-draw-3"
+          fill="none"
+          height="120"
+          rx="4"
+          stroke-dasharray="6 3"
+          stroke-width="1"
+          width="380"
+          x="60"
+          y="90"
+        />
+        <text
+          class="blueprint-line blueprint-draw-4"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="10"
+          opacity="0.7"
+          stroke="none"
+          x="75"
+          y="112"
+        >
+          Public Subnet 10.0.1.0/24
+        </text>
+        <rect
+          class="blueprint-line blueprint-draw-5"
+          fill="none"
+          height="60"
+          rx="4"
+          stroke-width="1.5"
+          width="180"
+          x="160"
+          y="125"
+        />
+        <text
+          class="blueprint-line blueprint-draw-6"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="12"
+          stroke="none"
+          text-anchor="middle"
+          x="250"
+          y="162"
+        >
+          ALB
+        </text>
+        <rect
+          class="blueprint-line blueprint-draw-7"
+          fill="none"
+          height="200"
+          rx="4"
+          stroke-dasharray="6 3"
+          stroke-width="1"
+          width="380"
+          x="60"
+          y="230"
+        />
+        <text
+          class="blueprint-line blueprint-draw-8"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="10"
+          opacity="0.7"
+          stroke="none"
+          x="75"
+          y="252"
+        >
+          Private Subnet 10.0.2.0/24
+        </text>
+        <rect
+          class="blueprint-line blueprint-draw-9"
+          fill="none"
+          height="100"
+          opacity="0.6"
+          rx="3"
+          stroke-width="1"
+          width="340"
+          x="80"
+          y="265"
+        />
+        <text
+          class="blueprint-line blueprint-draw-10"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="9"
+          opacity="0.6"
+          stroke="none"
+          x="95"
+          y="282"
+        >
+          ECS Cluster
+        </text>
+        <rect
+          class="blueprint-line blueprint-draw-11"
+          fill="none"
+          height="55"
+          rx="3"
+          stroke-width="1.5"
+          width="90"
+          x="95"
+          y="290"
+        />
+        <rect
+          class="blueprint-line blueprint-draw-11"
+          fill="none"
+          height="55"
+          rx="3"
+          stroke-width="1.5"
+          width="90"
+          x="205"
+          y="290"
+        />
+        <rect
+          class="blueprint-line blueprint-draw-11"
+          fill="none"
+          height="55"
+          rx="3"
+          stroke-width="1.5"
+          width="90"
+          x="315"
+          y="290"
+        />
+        <text
+          class="blueprint-line blueprint-draw-12"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="10"
+          stroke="none"
+          text-anchor="middle"
+          x="140"
+          y="322"
+        >
+          Task: API
+        </text>
+        <text
+          class="blueprint-line blueprint-draw-12"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="10"
+          stroke="none"
+          text-anchor="middle"
+          x="250"
+          y="322"
+        >
+          Task: Web
+        </text>
+        <text
+          class="blueprint-line blueprint-draw-12"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="10"
+          stroke="none"
+          text-anchor="middle"
+          x="360"
+          y="322"
+        >
+          Task: Worker
+        </text>
+        <ellipse
+          class="blueprint-line blueprint-draw-13"
+          cx="250"
+          cy="455"
+          fill="none"
+          rx="70"
+          ry="14"
+          stroke-width="1.5"
+        />
+        <line
+          class="blueprint-line blueprint-draw-13"
+          stroke-width="1.5"
+          x1="180"
+          x2="180"
+          y1="455"
+          y2="495"
+        />
+        <line
+          class="blueprint-line blueprint-draw-13"
+          stroke-width="1.5"
+          x1="320"
+          x2="320"
+          y1="455"
+          y2="495"
+        />
+        <ellipse
+          class="blueprint-line blueprint-draw-13"
+          cx="250"
+          cy="495"
+          fill="none"
+          rx="70"
+          ry="14"
+          stroke-width="1.5"
+        />
+        <text
+          class="blueprint-line blueprint-draw-14"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="11"
+          stroke="none"
+          text-anchor="middle"
+          x="250"
+          y="480"
+        >
+          RDS Postgres
+        </text>
+        <rect
+          class="blueprint-line blueprint-draw-13"
+          fill="none"
+          height="55"
+          rx="4"
+          stroke-width="1.5"
+          width="160"
+          x="560"
+          y="90"
+        />
+        <text
+          class="blueprint-line blueprint-draw-14"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="12"
+          stroke="none"
+          text-anchor="middle"
+          x="640"
+          y="123"
+        >
+          API Gateway
+        </text>
+        <rect
+          class="blueprint-line blueprint-draw-15"
+          fill="none"
+          height="50"
+          rx="3"
+          stroke-width="1.5"
+          width="100"
+          x="540"
+          y="200"
+        />
+        <rect
+          class="blueprint-line blueprint-draw-15"
+          fill="none"
+          height="50"
+          rx="3"
+          stroke-width="1.5"
+          width="100"
+          x="660"
+          y="200"
+        />
+        <rect
+          class="blueprint-line blueprint-draw-15"
+          fill="none"
+          height="50"
+          rx="3"
+          stroke-width="1.5"
+          width="100"
+          x="780"
+          y="200"
+        />
+        <text
+          class="blueprint-line blueprint-draw-16"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="11"
+          stroke="none"
+          text-anchor="middle"
+          x="590"
+          y="230"
+        >
+          Auth
+        </text>
+        <text
+          class="blueprint-line blueprint-draw-16"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="11"
+          stroke="none"
+          text-anchor="middle"
+          x="710"
+          y="230"
+        >
+          Core
+        </text>
+        <text
+          class="blueprint-line blueprint-draw-16"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="11"
+          stroke="none"
+          text-anchor="middle"
+          x="830"
+          y="230"
+        >
+          Search
+        </text>
+        <rect
+          class="blueprint-line blueprint-draw-15"
+          fill="none"
+          height="45"
+          rx="4"
+          stroke-dasharray="4 2"
+          stroke-width="1"
+          width="200"
+          x="600"
+          y="310"
+        />
+        <text
+          class="blueprint-line blueprint-draw-16"
+          fill="currentColor"
+          font-family="monospace"
+          font-size="10"
+          stroke="none"
+          text-anchor="middle"
+          x="700"
+          y="338"
+        >
+          SQS / EventBridge
+        </text>
+        <line
+          class="blueprint-line blueprint-draw-17"
+          marker-end="url(#arrowhead)"
+          stroke-width="1"
+          x1="250"
+          x2="250"
+          y1="185"
+          y2="265"
+        />
+        <line
+          class="blueprint-line blueprint-draw-17"
+          marker-end="url(#arrowhead)"
+          stroke-width="1"
+          x1="250"
+          x2="250"
+          y1="365"
+          y2="440"
+        />
+        <line
+          class="blueprint-line blueprint-draw-17"
+          marker-end="url(#arrowhead)"
+          stroke-width="1"
+          x1="600"
+          x2="590"
+          y1="145"
+          y2="200"
+        />
+        <line
+          class="blueprint-line blueprint-draw-17"
+          marker-end="url(#arrowhead)"
+          stroke-width="1"
+          x1="640"
+          x2="710"
+          y1="145"
+          y2="200"
+        />
+        <line
+          class="blueprint-line blueprint-draw-18"
+          marker-end="url(#arrowhead)"
+          stroke-width="1"
+          x1="700"
+          x2="830"
+          y1="145"
+          y2="200"
+        />
+        <line
+          class="blueprint-line blueprint-draw-18"
+          marker-end="url(#arrowhead)"
+          stroke-width="1"
+          x1="590"
+          x2="650"
+          y1="250"
+          y2="310"
+        />
+        <line
+          class="blueprint-line blueprint-draw-18"
+          marker-end="url(#arrowhead)"
+          stroke-width="1"
+          x1="710"
+          x2="700"
+          y1="250"
+          y2="310"
+        />
+        <line
+          class="blueprint-line blueprint-draw-18"
+          marker-end="url(#arrowhead)"
+          stroke-dasharray="8 4"
+          stroke-width="1.5"
+          x1="460"
+          x2="560"
+          y1="155"
+          y2="117"
+        />
+        <defs>
+          <marker
+            id="arrowhead"
+            markerHeight="6"
+            markerWidth="8"
+            orient="auto"
+            refX="8"
+            refY="3"
+          >
+            <path
+              d="M 0 0 L 8 3 L 0 6 Z"
+              fill="rgb(34, 211, 238)"
+            />
+          </marker>
+        </defs>
+      </svg>
     </div>
-  </div>
-  <div
-    class="absolute inset-0 flex items-center justify-center opacity-0"
-  >
     <div
-      aria-hidden="true"
-      class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8"
+      class="absolute inset-0 flex items-center justify-center opacity-0"
     >
-      <pre
-        class="leading-relaxed whitespace-pre-wrap"
-      />
+      <div
+        aria-hidden="true"
+        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8"
+      >
+        <pre
+          class="leading-relaxed whitespace-pre-wrap"
+        />
+      </div>
     </div>
-  </div>
-  <div
-    class="absolute inset-0 flex items-center justify-center opacity-0"
-  >
     <div
-      aria-hidden="true"
-      class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8"
+      class="absolute inset-0 flex items-center justify-center opacity-0"
     >
-      <pre
-        class="leading-relaxed whitespace-pre-wrap"
-      />
+      <div
+        aria-hidden="true"
+        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8"
+      >
+        <pre
+          class="leading-relaxed whitespace-pre-wrap"
+        />
+      </div>
     </div>
+    <div
+      class="absolute inset-0 flex items-center justify-center opacity-0"
+    >
+      <div
+        aria-hidden="true"
+        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8"
+      >
+        <pre
+          class="leading-relaxed whitespace-pre-wrap"
+        />
+      </div>
+    </div>
+    <div
+      class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 opacity-0"
+    >
+      <h1
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white max-w-4xl leading-tight"
+      >
+        Software architect, married to AI.
+      </h1>
+      <p
+        class="mt-6 text-lg sm:text-xl md:text-2xl text-cyan-100/80 max-w-2xl"
+      >
+        I design, build, and ship — without the overhead of ten people.
+      </p>
+    </div>
+    <div
+      class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950 to-transparent"
+    />
   </div>
   <div
-    class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 opacity-0"
+    class="absolute bottom-10 right-6 z-20 flex items-center gap-1.5"
   >
-    <h1
-      class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white max-w-4xl leading-tight"
+    <button
+      aria-label="Pause animation"
+      class="hero-control-btn"
+      type="button"
     >
-      Software architect, married to AI.
-    </h1>
-    <p
-      class="mt-6 text-lg sm:text-xl md:text-2xl text-cyan-100/80 max-w-2xl"
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-pause"
+        fill="none"
+        height="14"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          height="18"
+          rx="1"
+          width="5"
+          x="14"
+          y="3"
+        />
+        <rect
+          height="18"
+          rx="1"
+          width="5"
+          x="5"
+          y="3"
+        />
+      </svg>
+    </button>
+    <button
+      aria-label="Replay animation"
+      class="hero-control-btn"
+      type="button"
     >
-      I design, build, and ship — without the overhead of ten people.
-    </p>
+      <svg
+        aria-hidden="true"
+        class="lucide lucide-rotate-ccw"
+        fill="none"
+        height="14"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+        />
+        <path
+          d="M3 3v5h5"
+        />
+      </svg>
+    </button>
   </div>
-  <div
-    class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950 to-transparent"
-  />
 </section>
 `;
 
