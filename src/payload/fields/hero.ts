@@ -11,6 +11,7 @@ export const hero: Field = {
       options: [
         { label: 'None', value: 'none' },
         { label: 'Banner', value: 'banner' },
+        { label: 'Blueprint', value: 'blueprint' },
       ],
     },
     {
@@ -26,6 +27,20 @@ export const hero: Field = {
       type: 'text',
       admin: {
         condition: (_data, siblingData) => siblingData?.type === 'banner',
+      },
+    },
+    {
+      name: 'headline',
+      type: 'text',
+      admin: {
+        condition: (_data, siblingData) => siblingData?.type === 'blueprint',
+      },
+    },
+    {
+      name: 'subline',
+      type: 'text',
+      admin: {
+        condition: (_data, siblingData) => siblingData?.type === 'blueprint',
       },
     },
   ],

@@ -43,6 +43,17 @@ export const NullHero: Story = {
   },
 }
 
+export const BlueprintType: Story = {
+  args: {
+    title: 'Home',
+    hero: {
+      type: 'blueprint' as any,
+      headline: 'Software architect, married to AI.',
+      subline: 'I design, build, and ship \u2014 without the overhead of ten people.',
+    },
+  },
+}
+
 export const UnknownType: Story = {
   args: {
     title: 'Unknown Hero Type',

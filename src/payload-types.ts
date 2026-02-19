@@ -148,9 +148,11 @@ export interface Page {
   id: string;
   title: string;
   hero?: {
-    type?: ('none' | 'banner') | null;
+    type?: ('none' | 'banner' | 'blueprint') | null;
     image?: (string | null) | Media;
     tagline?: string | null;
+    headline?: string | null;
+    subline?: string | null;
   };
   sections?:
     | {
@@ -549,6 +551,8 @@ export interface PagesSelect<T extends boolean = true> {
         type?: T;
         image?: T;
         tagline?: T;
+        headline?: T;
+        subline?: T;
       };
   sections?:
     | T
