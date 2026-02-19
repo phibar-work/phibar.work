@@ -82,6 +82,18 @@
   animation: blueprint-fadeout 1.5s ease-in forwards;
 }
 
+/* --- Typing cursor blink --- */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typing-cursor {
+  animation: cursor-blink 0.8s step-end infinite;
+  color: rgb(34, 211, 238);
+  font-weight: bold;
+}
+
 /* --- Code block crossfade transitions --- */
 @keyframes code-block-in {
   from {
@@ -203,6 +215,11 @@
   }
 
   .code-line-visible {
+    animation: none;
+    opacity: 1;
+  }
+
+  .typing-cursor {
     animation: none;
     opacity: 1;
   }

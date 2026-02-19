@@ -464,78 +464,11 @@ exports[`Hero snapshots > BlueprintType matches snapshot 1`] = `
   >
     <div
       aria-hidden="true"
-      class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/60 select-none pointer-events-none max-w-2xl w-full px-8"
+      class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8"
     >
       <pre
-        class="leading-relaxed"
-      >
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0s;"
-        >
-          resource "aws_ecs_service" "api" {
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0.15s;"
-        >
-            cluster         = aws_ecs_cluster.main.id
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0.3s;"
-        >
-            task_definition = aws_ecs_task_definition.api.arn
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0.44999999999999996s;"
-        >
-            desired_count   = 3
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0.6s;"
-        >
-            launch_type     = "FARGATE"
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0.75s;"
-        >
-           
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0.8999999999999999s;"
-        >
-            network_configuration {
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 1.05s;"
-        >
-              subnets         = aws_subnet.private[*].id
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 1.2s;"
-        >
-              security_groups = [aws_security_group.ecs.id]
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 1.3499999999999999s;"
-        >
-            }
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 1.5s;"
-        >
-          }
-        </div>
-      </pre>
+        class="leading-relaxed whitespace-pre-wrap"
+      />
     </div>
   </div>
   <div
@@ -543,66 +476,23 @@ exports[`Hero snapshots > BlueprintType matches snapshot 1`] = `
   >
     <div
       aria-hidden="true"
-      class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/60 select-none pointer-events-none max-w-2xl w-full px-8"
+      class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8"
     >
       <pre
-        class="leading-relaxed"
-      >
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0s;"
-        >
-          export default function Hero() {
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0.15s;"
-        >
-            return (
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0.3s;"
-        >
-              &lt;section&gt;
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0.44999999999999996s;"
-        >
-                &lt;h1&gt;Software architect, married to AI.&lt;/h1&gt;
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0.6s;"
-        >
-                &lt;p&gt;I design, build, and ship
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0.75s;"
-        >
-                  — without the overhead of ten people.&lt;/p&gt;
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 0.8999999999999999s;"
-        >
-              &lt;/section&gt;
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 1.05s;"
-        >
-            )
-        </div>
-        <div
-          class="code-line-reveal"
-          style="--line-delay: 1.2s;"
-        >
-          }
-        </div>
-      </pre>
+        class="leading-relaxed whitespace-pre-wrap"
+      />
+    </div>
+  </div>
+  <div
+    class="absolute inset-0 flex items-center justify-center opacity-0"
+  >
+    <div
+      aria-hidden="true"
+      class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 select-none pointer-events-none max-w-2xl w-full px-8"
+    >
+      <pre
+        class="leading-relaxed whitespace-pre-wrap"
+      />
     </div>
   </div>
   <div

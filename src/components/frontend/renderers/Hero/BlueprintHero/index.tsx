@@ -5,36 +5,49 @@ import type { Page } from '@/payload-types'
 import { useHeaderTheme } from '@/components/frontend/providers/HeaderTheme'
 import { cn } from '@/utilities/ui'
 import { BlueprintSvg } from './BlueprintSvg'
-import { CodeReveal } from './CodeReveal'
+import { TypeWriter } from './TypeWriter'
 import './blueprint-hero.css'
 
-type Phase = 'architecture' | 'hold' | 'terraform' | 'react' | 'reveal' | 'settled'
+type Phase =
+  | 'architecture'
+  | 'hold'
+  | 'terraform'
+  | 'console'
+  | 'react'
+  | 'reveal'
+  | 'settled'
 
-const terraformLines = [
-  'resource "aws_ecs_service" "api" {',
-  '  cluster         = aws_ecs_cluster.main.id',
-  '  task_definition = aws_ecs_task_definition.api.arn',
-  '  desired_count   = 3',
-  '  launch_type     = "FARGATE"',
-  '',
-  '  network_configuration {',
-  '    subnets         = aws_subnet.private[*].id',
-  '    security_groups = [aws_security_group.ecs.id]',
-  '  }',
-  '}',
-]
+const terraformCode = `resource "aws_ecs_service" "api" {
+  cluster         = aws_ecs_cluster.main.id
+  task_definition = aws_ecs_task_definition.api.arn
+  desired_count   = 3
+  launch_type     = "FARGATE"
 
-const reactLines = [
-  'export default function Hero() {',
-  '  return (',
-  '    <section>',
-  '      <h1>Software architect, married to AI.</h1>',
-  '      <p>I design, build, and ship',
-  '        \u2014 without the overhead of ten people.</p>',
-  '    </section>',
-  '  )',
-  '}',
-]
+  network_configuration {
+    subnets         = aws_subnet.private[*].id
+    security_groups = [aws_security_group.ecs.id]
+  }
+}`
+
+const consoleCode = `$ npx create-next-app@latest phibar.work
+\u2713 Would you like to use TypeScript? Yes
+\u2713 Would you like to use Tailwind CSS? Yes
+\u2713 Would you like to use App Router? Yes
+
+Creating a new Next.js app in ./phibar.work...
+
+Installing dependencies...
+\u2713 Done in 12.3s`
+
+const reactCode = `export default function Hero() {
+  return (
+    <section>
+      <h1>Software architect, married to AI.</h1>
+      <p>I design, build, and ship
+        \u2014 without the overhead of ten people.</p>
+    </section>
+  )
+}`
 
 export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: string }) {
   const { setHeaderTheme } = useHeaderTheme()
@@ -52,19 +65,26 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
     const timers = [
       setTimeout(() => setPhase('hold'), 5000),
       setTimeout(() => setPhase('terraform'), 6000),
-      setTimeout(() => setPhase('react'), 8500),
-      setTimeout(() => setPhase('reveal'), 12000),
-      setTimeout(() => setPhase('settled'), 13500),
+      setTimeout(() => setPhase('console'), 9500),
+      setTimeout(() => setPhase('react'), 13000),
+      setTimeout(() => setPhase('reveal'), 16500),
+      setTimeout(() => setPhase('settled'), 18000),
     ]
     return () => timers.forEach(clearTimeout)
   }, [])
 
   const archVisible = phase === 'architecture' || phase === 'hold'
   const archFading = phase === 'terraform'
+
   const tfActive = phase === 'terraform'
-  const tfFading = phase === 'react'
+  const tfFading = phase === 'console'
+
+  const consoleActive = phase === 'console'
+  const consoleFading = phase === 'react'
+
   const reactActive = phase === 'react'
   const reactFading = phase === 'reveal'
+
   const textVisible = phase === 'reveal' || phase === 'settled'
 
   return (
@@ -86,24 +106,34 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
         <BlueprintSvg phase={phase} />
       </div>
 
-      {/* Terraform code */}
+      {/* Terraform code — typing */}
       <div
         className={cn(
           'absolute inset-0 flex items-center justify-center',
           !tfActive && !tfFading && 'opacity-0',
         )}
       >
-        <CodeReveal lines={terraformLines} active={tfActive} fading={tfFading} />
+        <TypeWriter text={terraformCode} active={tfActive} fading={tfFading} />
       </div>
 
-      {/* React component code */}
+      {/* Console bootstrap — typing */}
+      <div
+        className={cn(
+          'absolute inset-0 flex items-center justify-center',
+          !consoleActive && !consoleFading && 'opacity-0',
+        )}
+      >
+        <TypeWriter text={consoleCode} active={consoleActive} fading={consoleFading} />
+      </div>
+
+      {/* React component — typing */}
       <div
         className={cn(
           'absolute inset-0 flex items-center justify-center',
           !reactActive && !reactFading && 'opacity-0',
         )}
       >
-        <CodeReveal lines={reactLines} active={reactActive} fading={reactFading} />
+        <TypeWriter text={reactCode} active={reactActive} fading={reactFading} />
       </div>
 
       {/* Real headline + subline — appears at reveal */}

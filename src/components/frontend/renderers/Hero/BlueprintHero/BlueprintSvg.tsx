@@ -1,6 +1,6 @@
 import { cn } from '@/utilities/ui'
 
-type Phase = 'architecture' | 'hold' | 'terraform' | 'react' | 'reveal' | 'settled'
+type Phase = 'architecture' | 'hold' | 'terraform' | 'console' | 'react' | 'reveal' | 'settled'
 
 interface BlueprintSvgProps {
   phase: Phase
