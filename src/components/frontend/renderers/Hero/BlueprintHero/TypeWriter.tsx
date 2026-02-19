@@ -10,7 +10,7 @@ interface TypeWriterProps {
   speed?: number
 }
 
-export function TypeWriter({ text, active, fading, speed = 12 }: TypeWriterProps) {
+export function TypeWriter({ text, active, fading, speed = 25 }: TypeWriterProps) {
   const [charIndex, setCharIndex] = useState(0)
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
 

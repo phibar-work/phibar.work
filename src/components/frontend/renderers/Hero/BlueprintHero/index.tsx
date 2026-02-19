@@ -65,10 +65,10 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
     const timers = [
       setTimeout(() => setPhase('hold'), 5000),
       setTimeout(() => setPhase('terraform'), 6000),
-      setTimeout(() => setPhase('console'), 9500),
-      setTimeout(() => setPhase('react'), 13000),
-      setTimeout(() => setPhase('reveal'), 16500),
-      setTimeout(() => setPhase('settled'), 18000),
+      setTimeout(() => setPhase('console'), 13500),
+      setTimeout(() => setPhase('react'), 20500),
+      setTimeout(() => setPhase('reveal'), 26500),
+      setTimeout(() => setPhase('settled'), 28000),
     ]
     return () => timers.forEach(clearTimeout)
   }, [])
