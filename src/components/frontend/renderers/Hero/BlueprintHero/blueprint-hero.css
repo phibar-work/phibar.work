@@ -5,10 +5,10 @@
 /* --- Blueprint grid background pattern --- */
 .blueprint-grid {
   background-image:
-    linear-gradient(rgba(6, 182, 212, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.15) 1px, transparent 1px),
-    linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(58, 109, 214, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58, 109, 214, 0.15) 1px, transparent 1px),
+    linear-gradient(rgba(58, 109, 214, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58, 109, 214, 0.05) 1px, transparent 1px);
   background-size:
     100px 100px,
     100px 100px,
@@ -18,8 +18,8 @@
 
 /* --- Base SVG line style --- */
 .blueprint-line {
-  stroke: rgb(34, 211, 238); /* cyan-400 */
-  color: rgb(34, 211, 238);
+  stroke: rgb(58, 109, 214); /* brand #3A6DD6 */
+  color: rgb(58, 109, 214);
 }
 
 /* --- SVG stroke-dashoffset draw animation --- */
@@ -91,7 +91,7 @@
 
 .typing-cursor {
   animation: cursor-blink 0.8s step-end infinite;
-  color: rgb(34, 211, 238);
+  color: rgb(58, 109, 214);
   font-weight: bold;
 }
 
@@ -153,21 +153,21 @@
 @keyframes hero-glow {
   0%, 100% {
     text-shadow:
-      0 0 20px rgba(6, 182, 212, 0.3),
-      0 0 40px rgba(6, 182, 212, 0.1);
+      0 0 20px rgba(58, 109, 214, 0.3),
+      0 0 40px rgba(58, 109, 214, 0.1);
   }
   50% {
     text-shadow:
-      0 0 30px rgba(6, 182, 212, 0.5),
-      0 0 60px rgba(6, 182, 212, 0.2);
+      0 0 30px rgba(58, 109, 214, 0.5),
+      0 0 60px rgba(58, 109, 214, 0.2);
   }
 }
 
 .hero-text-glow {
   animation: hero-glow 4s ease-in-out infinite;
   text-shadow:
-    0 0 20px rgba(6, 182, 212, 0.3),
-    0 0 40px rgba(6, 182, 212, 0.1);
+    0 0 20px rgba(58, 109, 214, 0.3),
+    0 0 40px rgba(58, 109, 214, 0.1);
 }
 
 @keyframes hero-fade-in {
@@ -203,7 +203,7 @@
   height: 32px;
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.08);
-  color: rgba(34, 211, 238, 0.5);
+  color: rgba(58, 109, 214, 0.5);
   border: none;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
@@ -212,7 +212,7 @@
 
 .hero-control-btn:hover {
   background: rgba(255, 255, 255, 0.15);
-  color: rgb(34, 211, 238);
+  color: rgb(58, 109, 214);
 }
 
 /* --- Reduced motion --- */

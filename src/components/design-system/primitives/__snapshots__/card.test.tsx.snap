@@ -29,12 +29,12 @@ exports[`Card snapshots > Default matches snapshot 1`] = `
     class="items-center p-6 pt-0 flex justify-between"
   >
     <button
-      class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-zinc-200 bg-white hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+      class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-zinc-200 bg-white hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
     >
       Cancel
     </button>
     <button
-      class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90"
+      class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-brand text-white hover:bg-brand-deep dark:bg-accent dark:text-zinc-950 dark:hover:bg-accent/90"
     >
       Submit
     </button>

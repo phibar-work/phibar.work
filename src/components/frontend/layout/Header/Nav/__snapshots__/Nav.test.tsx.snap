@@ -5,19 +5,19 @@ exports[`HeaderNav snapshots > Default matches snapshot 1`] = `
   class="flex gap-3 items-center"
 >
   <a
-    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 text-brand dark:text-accent items-start justify-start underline-offset-4 hover:underline"
     href="/"
   >
     Home
   </a>
   <a
-    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 text-brand dark:text-accent items-start justify-start underline-offset-4 hover:underline"
     href="/about"
   >
     About
   </a>
   <a
-    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 text-brand dark:text-accent items-start justify-start underline-offset-4 hover:underline"
     href="/contact"
   >
     Contact
@@ -36,31 +36,31 @@ exports[`HeaderNav snapshots > ManyItems matches snapshot 1`] = `
   class="flex gap-3 items-center"
 >
   <a
-    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 text-brand dark:text-accent items-start justify-start underline-offset-4 hover:underline"
     href="/"
   >
     Home
   </a>
   <a
-    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 text-brand dark:text-accent items-start justify-start underline-offset-4 hover:underline"
     href="/about"
   >
     About
   </a>
   <a
-    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 text-brand dark:text-accent items-start justify-start underline-offset-4 hover:underline"
     href="/services"
   >
     Services
   </a>
   <a
-    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 text-brand dark:text-accent items-start justify-start underline-offset-4 hover:underline"
     href="/blog"
   >
     Blog
   </a>
   <a
-    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 text-brand dark:text-accent items-start justify-start underline-offset-4 hover:underline"
     href="/contact"
   >
     Contact
@@ -79,7 +79,7 @@ exports[`HeaderNav snapshots > SingleItem matches snapshot 1`] = `
   class="flex gap-3 items-center"
 >
   <a
-    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+    class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 text-brand dark:text-accent items-start justify-start underline-offset-4 hover:underline"
     href="/"
   >
     Home

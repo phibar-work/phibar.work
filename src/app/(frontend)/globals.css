@@ -3,6 +3,13 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-brand: #3A6DD6;
+  --color-brand-deep: #2C5BC9;
+  --color-brand-mid: #2F87C9;
+  --color-accent: #22C5C6;
+}
+
 @layer base {
   h1, h2, h3, h4, h5, h6 {
     font-size: unset;

@@ -439,7 +439,7 @@ exports[`BlueprintHero snapshots > CustomContent matches snapshot 1`] = `
           >
             <path
               d="M 0 0 L 8 3 L 0 6 Z"
-              fill="rgb(34, 211, 238)"
+              fill="rgb(58, 109, 214)"
             />
           </marker>
         </defs>
@@ -450,7 +450,7 @@ exports[`BlueprintHero snapshots > CustomContent matches snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8"
+        class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
       >
         <pre
           class="leading-relaxed whitespace-pre-wrap"
@@ -462,7 +462,7 @@ exports[`BlueprintHero snapshots > CustomContent matches snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8"
+        class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
       >
         <pre
           class="leading-relaxed whitespace-pre-wrap"
@@ -474,7 +474,7 @@ exports[`BlueprintHero snapshots > CustomContent matches snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8"
+        class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
       >
         <pre
           class="leading-relaxed whitespace-pre-wrap"
@@ -490,7 +490,7 @@ exports[`BlueprintHero snapshots > CustomContent matches snapshot 1`] = `
         Building the future.
       </h1>
       <p
-        class="mt-6 text-lg sm:text-xl md:text-2xl text-cyan-100/80 max-w-2xl"
+        class="mt-6 text-lg sm:text-xl md:text-2xl text-blue-100/80 max-w-2xl"
       >
         One line of code at a time.
       </p>
@@ -1005,7 +1005,7 @@ exports[`BlueprintHero snapshots > Default matches snapshot 1`] = `
           >
             <path
               d="M 0 0 L 8 3 L 0 6 Z"
-              fill="rgb(34, 211, 238)"
+              fill="rgb(58, 109, 214)"
             />
           </marker>
         </defs>
@@ -1016,7 +1016,7 @@ exports[`BlueprintHero snapshots > Default matches snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8"
+        class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
       >
         <pre
           class="leading-relaxed whitespace-pre-wrap"
@@ -1028,7 +1028,7 @@ exports[`BlueprintHero snapshots > Default matches snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8"
+        class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
       >
         <pre
           class="leading-relaxed whitespace-pre-wrap"
@@ -1040,7 +1040,7 @@ exports[`BlueprintHero snapshots > Default matches snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8"
+        class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
       >
         <pre
           class="leading-relaxed whitespace-pre-wrap"
@@ -1056,7 +1056,7 @@ exports[`BlueprintHero snapshots > Default matches snapshot 1`] = `
         Software architect, married to AI.
       </h1>
       <p
-        class="mt-6 text-lg sm:text-xl md:text-2xl text-cyan-100/80 max-w-2xl"
+        class="mt-6 text-lg sm:text-xl md:text-2xl text-blue-100/80 max-w-2xl"
       >
         From whiteboard to production — we plan it, I build it, no overhead of ten people.
       </p>
@@ -1571,7 +1571,7 @@ exports[`BlueprintHero snapshots > MinimalContent matches snapshot 1`] = `
           >
             <path
               d="M 0 0 L 8 3 L 0 6 Z"
-              fill="rgb(34, 211, 238)"
+              fill="rgb(58, 109, 214)"
             />
           </marker>
         </defs>
@@ -1582,7 +1582,7 @@ exports[`BlueprintHero snapshots > MinimalContent matches snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8"
+        class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
       >
         <pre
           class="leading-relaxed whitespace-pre-wrap"
@@ -1594,7 +1594,7 @@ exports[`BlueprintHero snapshots > MinimalContent matches snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8"
+        class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
       >
         <pre
           class="leading-relaxed whitespace-pre-wrap"
@@ -1606,7 +1606,7 @@ exports[`BlueprintHero snapshots > MinimalContent matches snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="font-mono text-sm sm:text-base md:text-lg text-cyan-300/70 max-w-2xl w-full px-8"
+        class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
       >
         <pre
           class="leading-relaxed whitespace-pre-wrap"
@@ -1622,7 +1622,7 @@ exports[`BlueprintHero snapshots > MinimalContent matches snapshot 1`] = `
         Software architect, married to AI.
       </h1>
       <p
-        class="mt-6 text-lg sm:text-xl md:text-2xl text-cyan-100/80 max-w-2xl"
+        class="mt-6 text-lg sm:text-xl md:text-2xl text-blue-100/80 max-w-2xl"
       >
         From whiteboard to production — we plan it, I build it, no overhead of ten people.
       </p>

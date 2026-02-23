@@ -295,7 +295,7 @@ export function BlueprintSvg({ phase }: BlueprintSvgProps) {
           refX="8" refY="3"
           orient="auto"
         >
-          <path d="M 0 0 L 8 3 L 0 6 Z" fill="rgb(34, 211, 238)" />
+          <path d="M 0 0 L 8 3 L 0 6 Z" fill="rgb(58, 109, 214)" />
         </marker>
       </defs>
     </svg>

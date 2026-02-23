@@ -207,7 +207,7 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
           <p
             className={cn(
               'mt-6 text-lg sm:text-xl md:text-2xl',
-              'text-cyan-100/80 max-w-2xl',
+              'text-blue-100/80 max-w-2xl',
               textVisible && 'hero-fade-in-sub',
             )}
           >
