@@ -1,11 +1,16 @@
 # phibar-work
 
+## 1.12.0
+
+### Minor Changes
+
+- afc1997: Add light and dark mode support to BlueprintHero
+
 ## 1.10.0
 
 ### Minor Changes
 
 - Increase test coverage to 100% lines across all files
-
   - Add stories for uncovered component branches (select separator, reference links, fragment wrapper, internal doc links, empty nav, unknown hero type, banner hero image)
   - Add unit tests for Theme provider, ThemeSelector, shared utilities, and type validators
   - Add unit tests for `getURL`, `deepMerge` edge cases, and `generatePreviewPath` null/undefined slugs
@@ -20,7 +25,6 @@
 ### Minor Changes
 
 - Add code coverage with Vitest v8 provider
-
   - Configure coverage in `vitest.config.mts` with 80% thresholds (lines, functions, statements) and 70% branches
   - Exclude Next.js app routes, Payload CMS files, admin components, and generated files from coverage
   - Add `coverage`, `test:unit:coverage`, and `coverage:open` scripts to package.json
@@ -32,7 +36,6 @@
 ### Minor Changes
 
 - Add snapshot testing for Storybook components
-
   - Add `runSnapshotTests` utility for portable stories (`src/test/storybook-snapshots.tsx`)
   - Add colocated snapshot tests for all 8 design system primitives (44 snapshots)
   - Configure vitest setup with Storybook project annotations
@@ -52,7 +55,6 @@
 ### Minor Changes
 
 - Add Storybook with design system primitives and colocated tests
-
   - Rename `shared/` to `design-system/primitives/` and update all imports
   - Add colocated `.stories.tsx` for all 8 primitives (Button, Card, Checkbox, Input, Label, Pagination, Select, Textarea)
   - Configure Storybook preview with Tailwind CSS and light/dark theme toggle
@@ -67,7 +69,6 @@
 ### Minor Changes
 
 - Integrate Rybbit analytics with ad blocker bypass
-
   - Add Rybbit tracking script to frontend layout via Next.js Script component
   - Add Next.js rewrites to proxy script, tracking, and site config endpoints through own domain
   - Configure site ID and host via environment variables
@@ -89,7 +90,6 @@
 ### Minor Changes
 
 - Upgrade Tailwind CSS to v4
-
   - Upgrade tailwindcss to v4.1.18
   - Add @tailwindcss/postcss for PostCSS integration
   - Remove tailwind.config.mjs (config now in CSS)
@@ -109,7 +109,6 @@
 ### Minor Changes
 
 - Update dependencies to latest versions
-
   - @biomejs/biome: 1.9.4 → 2.3.12 (migrated config)
   - @aws-sdk/client-s3: 3.968.0 → 3.975.0
   - @playwright/test: 1.56.1 → 1.58.0
@@ -131,7 +130,6 @@
 ### Minor Changes
 
 - Update to Next.js 16
-
   - Fix revalidateTag for Next.js 16 compatibility
   - Fix linter warnings
   - Add GitHub Actions lint workflow for PRs
