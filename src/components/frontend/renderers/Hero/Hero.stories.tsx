@@ -49,7 +49,8 @@ export const BlueprintType: Story = {
     hero: {
       type: 'blueprint' as any,
       headline: 'Software architect, married to AI.',
-      subline: 'From whiteboard to production \u2014 we plan it, I build it, no overhead of ten people.',
+      subline:
+        'From whiteboard to production \u2014 we plan it, I build it, no overhead of ten people.',
     },
   },
 }
