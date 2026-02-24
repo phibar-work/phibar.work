@@ -62,15 +62,15 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
 
   const headline = hero?.headline || 'Software architect, married to AI.'
   const subline =
-    hero?.subline || 'From whiteboard to production \u2014 we plan it, I build it, no overhead of ten people.'
+    hero?.subline ||
+    'From whiteboard to production \u2014 we plan it, I build it, no overhead of ten people.'
 
   const elapsedRef = useRef(0)
   const resumedAtRef = useRef(Date.now())
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([])
 
   useEffect(() => {
-    setHeaderTheme('dark')
-    return () => setHeaderTheme(null)
+    setHeaderTheme(null)
   }, [setHeaderTheme])
 
   const schedulePhases = useCallback((fromElapsed: number) => {
@@ -129,7 +129,7 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
   return (
     <section
       className={cn(
-        'relative w-full h-screen overflow-hidden bg-slate-950',
+        'relative w-full h-screen overflow-hidden bg-slate-50 dark:bg-zinc-950',
         paused && 'hero-paused',
       )}
       aria-label={title}
@@ -198,7 +198,7 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
           <h1
             className={cn(
               'text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold',
-              'text-white max-w-4xl leading-tight',
+              'text-zinc-950 dark:text-white max-w-4xl leading-tight',
               textVisible && 'hero-fade-in hero-text-glow',
             )}
           >
@@ -207,7 +207,7 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
           <p
             className={cn(
               'mt-6 text-lg sm:text-xl md:text-2xl',
-              'text-blue-100/80 max-w-2xl',
+              'text-zinc-600 dark:text-blue-100/80 max-w-2xl',
               textVisible && 'hero-fade-in-sub',
             )}
           >
@@ -216,7 +216,7 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
         </div>
 
         {/* Bottom gradient fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-950 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 dark:from-zinc-950 to-transparent" />
       </div>
 
       {/* Playback controls */}

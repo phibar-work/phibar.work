@@ -5,15 +5,23 @@
 /* --- Blueprint grid background pattern --- */
 .blueprint-grid {
   background-image:
-    linear-gradient(rgba(58, 109, 214, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(58, 109, 214, 0.15) 1px, transparent 1px),
-    linear-gradient(rgba(58, 109, 214, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(58, 109, 214, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(58, 109, 214, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58, 109, 214, 0.12) 1px, transparent 1px),
+    linear-gradient(rgba(58, 109, 214, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58, 109, 214, 0.04) 1px, transparent 1px);
   background-size:
     100px 100px,
     100px 100px,
     20px 20px,
     20px 20px;
+}
+
+:where(.dark, .dark *) .blueprint-grid {
+  background-image:
+    linear-gradient(rgba(58, 109, 214, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58, 109, 214, 0.15) 1px, transparent 1px),
+    linear-gradient(rgba(58, 109, 214, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58, 109, 214, 0.05) 1px, transparent 1px);
 }
 
 /* --- Base SVG line style --- */
@@ -153,6 +161,26 @@
 @keyframes hero-glow {
   0%, 100% {
     text-shadow:
+      0 0 20px rgba(58, 109, 214, 0.15),
+      0 0 40px rgba(58, 109, 214, 0.05);
+  }
+  50% {
+    text-shadow:
+      0 0 30px rgba(58, 109, 214, 0.25),
+      0 0 60px rgba(58, 109, 214, 0.1);
+  }
+}
+
+.hero-text-glow {
+  animation: hero-glow 4s ease-in-out infinite;
+  text-shadow:
+    0 0 20px rgba(58, 109, 214, 0.15),
+    0 0 40px rgba(58, 109, 214, 0.05);
+}
+
+@keyframes hero-glow-dark {
+  0%, 100% {
+    text-shadow:
       0 0 20px rgba(58, 109, 214, 0.3),
       0 0 40px rgba(58, 109, 214, 0.1);
   }
@@ -163,8 +191,8 @@
   }
 }
 
-.hero-text-glow {
-  animation: hero-glow 4s ease-in-out infinite;
+:where(.dark, .dark *) .hero-text-glow {
+  animation-name: hero-glow-dark;
   text-shadow:
     0 0 20px rgba(58, 109, 214, 0.3),
     0 0 40px rgba(58, 109, 214, 0.1);
@@ -202,7 +230,7 @@
   width: 32px;
   height: 32px;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.06);
   color: rgba(58, 109, 214, 0.5);
   border: none;
   cursor: pointer;
@@ -211,8 +239,16 @@
 }
 
 .hero-control-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.12);
   color: rgb(58, 109, 214);
+}
+
+:where(.dark, .dark *) .hero-control-btn {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+:where(.dark, .dark *) .hero-control-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 
 /* --- Reduced motion --- */
