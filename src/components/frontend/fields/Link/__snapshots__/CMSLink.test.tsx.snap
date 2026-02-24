@@ -2,7 +2,7 @@
 
 exports[`CMSLink snapshots > ButtonDefault matches snapshot 1`] = `
 <a
-  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90"
+  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-brand text-white hover:bg-brand-deep dark:bg-accent dark:text-zinc-950 dark:hover:bg-accent/90"
   href="/contact"
 >
   Contact
@@ -11,7 +11,7 @@ exports[`CMSLink snapshots > ButtonDefault matches snapshot 1`] = `
 
 exports[`CMSLink snapshots > ButtonGhost matches snapshot 1`] = `
 <a
-  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
   href="/docs"
 >
   Documentation
@@ -20,7 +20,7 @@ exports[`CMSLink snapshots > ButtonGhost matches snapshot 1`] = `
 
 exports[`CMSLink snapshots > ButtonOutline matches snapshot 1`] = `
 <a
-  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-zinc-200 bg-white hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-zinc-200 bg-white hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
   href="/services"
 >
   Our Services
@@ -29,7 +29,7 @@ exports[`CMSLink snapshots > ButtonOutline matches snapshot 1`] = `
 
 exports[`CMSLink snapshots > ButtonSecondary matches snapshot 1`] = `
 <a
-  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-zinc-100 text-zinc-900 hover:bg-zinc-100/80 dark:bg-zinc-800 dark:text-zinc-50 dark:hover:bg-zinc-800/80"
+  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-zinc-100 text-zinc-900 hover:bg-zinc-100/80 dark:bg-zinc-800 dark:text-zinc-50 dark:hover:bg-zinc-800/80"
   href="/pricing"
 >
   View Pricing
@@ -38,7 +38,7 @@ exports[`CMSLink snapshots > ButtonSecondary matches snapshot 1`] = `
 
 exports[`CMSLink snapshots > ExternalLink matches snapshot 1`] = `
 <a
-  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-zinc-200 bg-white hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
+  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 border border-zinc-200 bg-white hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:bg-zinc-800 dark:hover:text-zinc-50"
   href="https://example.com"
   rel="noopener noreferrer"
   target="_blank"
@@ -58,7 +58,7 @@ exports[`CMSLink snapshots > InlineLink matches snapshot 1`] = `
 
 exports[`CMSLink snapshots > LargeButton matches snapshot 1`] = `
 <a
-  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-11 rounded px-8 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90"
+  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 h-11 rounded px-8 bg-brand text-white hover:bg-brand-deep dark:bg-accent dark:text-zinc-950 dark:hover:bg-accent/90"
   href="/start"
 >
   Get Started
@@ -67,7 +67,7 @@ exports[`CMSLink snapshots > LargeButton matches snapshot 1`] = `
 
 exports[`CMSLink snapshots > LinkVariant matches snapshot 1`] = `
 <a
-  class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 text-zinc-900 dark:text-zinc-50 items-start justify-start underline-offset-4 hover:underline"
+  class="inline-flex whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 text-brand dark:text-accent items-start justify-start underline-offset-4 hover:underline"
   href="/help"
 >
   Get Help
@@ -87,7 +87,7 @@ exports[`CMSLink snapshots > ReferenceLink matches snapshot 1`] = `
 
 exports[`CMSLink snapshots > ReferenceLinkAsButton matches snapshot 1`] = `
 <a
-  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90"
+  class="inline-flex items-center justify-center whitespace-nowrap rounded text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-brand text-white hover:bg-brand-deep dark:bg-accent dark:text-zinc-950 dark:hover:bg-accent/90"
   href="/services"
 >
   Our Services
@@ -105,7 +105,7 @@ exports[`CMSLink snapshots > ReferenceWithStringValue matches snapshot 1`] = `
 
 exports[`CMSLink snapshots > SmallButton matches snapshot 1`] = `
 <a
-  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-2 dark:focus-visible:ring-zinc-300 disabled:pointer-events-none disabled:opacity-50 h-9 rounded px-3 bg-zinc-900 text-zinc-50 hover:bg-zinc-900/90 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-50/90"
+  class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 dark:focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50 h-9 rounded px-3 bg-brand text-white hover:bg-brand-deep dark:bg-accent dark:text-zinc-950 dark:hover:bg-accent/90"
   href="/signup"
 >
   Sign Up

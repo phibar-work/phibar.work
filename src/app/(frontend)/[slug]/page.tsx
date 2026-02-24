@@ -8,6 +8,7 @@ import { PayloadRedirects } from '@/components/frontend/PayloadRedirects'
 import { RenderHero } from '@/components/frontend/renderers/Hero'
 import { RenderSections } from '@/components/frontend/renderers/Sections'
 import { generateMeta } from '@/utilities/generateMeta'
+import { cn } from '@/utilities/ui'
 import PageClient from './page.client'
 
 export async function generateStaticParams() {
@@ -53,9 +54,11 @@ export default async function Page({ params: paramsPromise }: Args) {
     return <PayloadRedirects url={url} />
   }
 
+  const isFullBleedHero = page.hero?.type === 'blueprint'
+
   return (
-    <div className="flex-1 py-16">
-      <PageClient />
+    <div className={cn('flex-1', !isFullBleedHero && 'py-16')}>
+      <PageClient heroType={page.hero?.type} />
       <PayloadRedirects disableNotFound url={url} />
 
       {draft && <LivePreviewListener />}

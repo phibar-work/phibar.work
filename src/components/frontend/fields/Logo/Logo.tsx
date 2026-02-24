@@ -16,14 +16,14 @@ export const Logo = (props: Props) => {
     /* eslint-disable @next/next/no-img-element */
     // biome-ignore lint/performance/noImgElement: SVG element, Next.js Image not suitable
     <img
-      alt="Payload Logo"
+      alt="phibar.work"
       width={193}
       height={34}
       loading={loading}
       fetchPriority={priority}
       decoding="async"
       className={clsx('max-w-[9.375rem] w-full h-[34px]', className)}
-      src="/payload-logo-light.svg"
+      src="/phibar-work.svg"
     />
   )
 }

@@ -24,7 +24,7 @@ export async function Footer() {
             {navItems.map(({ link }) => {
               return (
                 <CMSLink
-                  className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors"
+                  className="text-zinc-600 hover:text-brand dark:text-zinc-400 dark:hover:text-accent transition-colors"
                   key={link.label}
                   {...link}
                 />
