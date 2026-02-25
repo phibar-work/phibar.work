@@ -15,7 +15,7 @@
     --frame-pad: 12px;
     --frame-radius: 10px;
     --frame-inner: 6px;
-    --frame-bg: red; /* debug — production: #ffffff / #09090b */
+    --frame-bg: #f4f4f5; /* matches theme-color meta — light */
     --content-bg: #ffffff;
     --content-bg-dark: #09090b;
   }
@@ -28,6 +28,10 @@
 
 :root:where(.dark) {
   --content-bg: var(--content-bg-dark);
+}
+
+:root:where(.dark) {
+  --frame-bg: #27272a; /* matches theme-color meta — dark */
 }
 
 /* Fixed frame */
@@ -53,6 +57,7 @@
   grid-column: 1;
   justify-self: center;
   z-index: 1;
+  position: relative;
   background: var(--frame-bg);
   border-bottom-left-radius: var(--frame-radius);
   border-bottom-right-radius: var(--frame-radius);
@@ -64,9 +69,67 @@
   grid-column: 1;
   justify-self: center;
   z-index: 1;
+  position: relative;
   background: var(--frame-bg);
   border-top-left-radius: var(--frame-radius);
   border-top-right-radius: var(--frame-radius);
+}
+
+/* Scoop borders — radial-gradient arcs at the concave corners */
+.frame-nav::before,
+.frame-nav::after,
+.frame-cta::before,
+.frame-cta::after {
+  content: '';
+  position: absolute;
+  width: var(--frame-radius);
+  height: var(--frame-radius);
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Nav left scoop — swapped to left: 100% */
+.frame-nav::before {
+  top: 0;
+  left: 100%;
+  background: radial-gradient(
+    circle at 100% 100%,
+    transparent var(--frame-radius),
+    var(--frame-bg) var(--frame-radius)
+  );
+}
+
+/* Nav right scoop — swapped to right: 100% */
+.frame-nav::after {
+  top: 0;
+  right: 100%;
+  background: radial-gradient(
+    circle at 0% 100%,
+    transparent var(--frame-radius),
+    var(--frame-bg) var(--frame-radius)
+  );
+}
+
+/* CTA left scoop — swapped to left: 100% */
+.frame-cta::before {
+  bottom: 0;
+  left: 100%;
+  background: radial-gradient(
+    circle at 100% 0%,
+    transparent var(--frame-radius),
+    var(--frame-bg) var(--frame-radius)
+  );
+}
+
+/* CTA right scoop — swapped to right: 100% */
+.frame-cta::after {
+  bottom: 0;
+  right: 100%;
+  background: radial-gradient(
+    circle at 0% 0%,
+    transparent var(--frame-radius),
+    var(--frame-bg) var(--frame-radius)
+  );
 }
 
 /* Content fills entire frame, scrolls behind nav/cta */
@@ -76,4 +139,5 @@
   overflow-y: auto;
   scroll-behavior: smooth;
   background: var(--content-bg);
+  border-radius: var(--frame-radius);
 }
