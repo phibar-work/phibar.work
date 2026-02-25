@@ -1,5 +1,8 @@
 import type { Field } from 'payload'
 
+const isNotNone = (_data: unknown, siblingData: Record<string, unknown> | undefined) =>
+  siblingData?.type !== 'none'
+
 export const hero: Field = {
   name: 'hero',
   type: 'group',
@@ -13,6 +16,24 @@ export const hero: Field = {
         { label: 'Banner', value: 'banner' },
         { label: 'Blueprint', value: 'blueprint' },
       ],
+    },
+    {
+      name: 'sectionId',
+      type: 'text',
+      required: true,
+      admin: {
+        description: 'HTML-safe anchor ID for navigation (e.g. "hero", "intro")',
+        condition: isNotNone,
+      },
+    },
+    {
+      name: 'sectionTitle',
+      type: 'text',
+      required: true,
+      admin: {
+        description: 'Short title displayed in the navigation menu and for screen readers',
+        condition: isNotNone,
+      },
     },
     {
       name: 'image',

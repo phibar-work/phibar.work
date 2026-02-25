@@ -7,6 +7,7 @@ import { LivePreviewListener } from '@/components/frontend/LivePreviewListener'
 import { PayloadRedirects } from '@/components/frontend/PayloadRedirects'
 import { RenderHero } from '@/components/frontend/renderers/Hero'
 import { RenderSections } from '@/components/frontend/renderers/Sections'
+import type { SectionNavItem, PageCta } from '@/components/frontend/providers/ActiveSection'
 import { generateMeta } from '@/utilities/generateMeta'
 import { cn } from '@/utilities/ui'
 import PageClient from './page.client'
@@ -56,9 +57,33 @@ export default async function Page({ params: paramsPromise }: Args) {
 
   const isFullBleedHero = page.hero?.type === 'blueprint'
 
+  // Build section nav items for frame navigation
+  const sectionNavItems: SectionNavItem[] = []
+
+  if (page.hero?.type && page.hero.type !== 'none' && page.hero.sectionId && page.hero.sectionTitle) {
+    sectionNavItems.push({ id: page.hero.sectionId, title: page.hero.sectionTitle })
+  }
+
+  if (page.sections) {
+    for (const section of page.sections) {
+      if (section.sectionId && section.sectionTitle) {
+        sectionNavItems.push({ id: section.sectionId, title: section.sectionTitle })
+      }
+    }
+  }
+
+  const pageCta: PageCta | null = page.cta?.label
+    ? { label: page.cta.label, link: page.cta.link, icon: page.cta.icon }
+    : null
+
   return (
     <div className={cn('flex-1', !isFullBleedHero && 'py-16')}>
-      <PageClient heroType={page.hero?.type} />
+      <PageClient
+        heroType={page.hero?.type}
+        sections={sectionNavItems}
+        pageTitle={page.title}
+        cta={pageCta}
+      />
       <PayloadRedirects disableNotFound url={url} />
 
       {draft && <LivePreviewListener />}

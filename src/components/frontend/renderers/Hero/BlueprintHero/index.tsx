@@ -128,6 +128,7 @@ export function BlueprintHero({ hero, title }: { hero: Page['hero']; title: stri
 
   return (
     <section
+      id={hero?.sectionId ?? undefined}
       className={cn(
         'relative w-full h-screen overflow-hidden bg-slate-50 dark:bg-zinc-950',
         paused && 'hero-paused',

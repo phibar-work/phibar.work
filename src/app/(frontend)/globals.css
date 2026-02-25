@@ -11,8 +11,69 @@
 }
 
 @layer base {
+  :root {
+    --frame-pad: 12px;
+    --frame-radius: 10px;
+    --frame-inner: 6px;
+    --frame-bg: red; /* debug — production: #ffffff / #09090b */
+    --content-bg: #ffffff;
+    --content-bg-dark: #09090b;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-size: unset;
     font-weight: unset;
   }
+}
+
+:root:where(.dark) {
+  --content-bg: var(--content-bg-dark);
+}
+
+/* Fixed frame */
+.frame {
+  background: var(--frame-bg);
+  position: fixed;
+  top: max(var(--frame-pad), env(safe-area-inset-top, 0px));
+  bottom: max(var(--frame-pad), env(safe-area-inset-bottom, 0px));
+  left: max(var(--frame-pad), env(safe-area-inset-left, 0px));
+  right: max(var(--frame-pad), env(safe-area-inset-right, 0px));
+  border-radius: var(--frame-radius);
+  overflow: hidden;
+  padding: var(--frame-inner);
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+}
+
+/* Nav — centered, shrinks to content width, scoops = exposed content on sides */
+.frame-nav {
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: center;
+  z-index: 1;
+  background: var(--frame-bg);
+  border-bottom-left-radius: var(--frame-radius);
+  border-bottom-right-radius: var(--frame-radius);
+}
+
+/* CTA — centered, shrinks to content width */
+.frame-cta {
+  grid-row: 3;
+  grid-column: 1;
+  justify-self: center;
+  z-index: 1;
+  background: var(--frame-bg);
+  border-top-left-radius: var(--frame-radius);
+  border-top-right-radius: var(--frame-radius);
+}
+
+/* Content fills entire frame, scrolls behind nav/cta */
+.frame-scroll {
+  grid-row: 1 / -1;
+  grid-column: 1;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  background: var(--content-bg);
 }

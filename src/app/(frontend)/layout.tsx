@@ -1,11 +1,10 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { draftMode } from 'next/headers'
 import Script from 'next/script'
 
 import type React from 'react'
 import { AdminBar } from '@/components/frontend/layout/AdminBar'
-import { Footer } from '@/components/frontend/layout/Footer'
-import { Header } from '@/components/frontend/layout/Header'
+import { Frame } from '@/components/frontend/layout/Frame'
 import { Providers } from '@/components/frontend/providers'
 import { InitTheme } from '@/components/frontend/providers/Theme/InitTheme'
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
@@ -22,8 +21,18 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <InitTheme />
         <link href="/favicon.ico" rel="icon" sizes="32x32" />
         <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+        <meta
+          name="theme-color"
+          content="#f4f4f5"
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content="#27272a"
+          media="(prefers-color-scheme: dark)"
+        />
       </head>
-      <body className="bg-white text-zinc-950 dark:bg-zinc-950 dark:text-zinc-50 min-h-screen flex flex-col">
+      <body className="text-zinc-950 dark:text-zinc-50" style={{ background: 'var(--frame-bg)' }}>
         <Providers>
           <AdminBar
             adminBarProps={{
@@ -31,9 +40,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             }}
           />
 
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <Frame>
+            <main>{children}</main>
+          </Frame>
         </Providers>
         <Script id="deployment-info" strategy="beforeInteractive">
           {`console.log('%c[Deployment Info]', 'color: #00ff00; font-weight: bold', {
@@ -51,6 +60,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </body>
     </html>
   )
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
 }
 
 export const metadata: Metadata = {

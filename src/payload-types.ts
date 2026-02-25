@@ -149,6 +149,14 @@ export interface Page {
   title: string;
   hero?: {
     type?: ('none' | 'banner' | 'blueprint') | null;
+    /**
+     * HTML-safe anchor ID for navigation (e.g. "hero", "intro")
+     */
+    sectionId?: string | null;
+    /**
+     * Short title displayed in the navigation menu and for screen readers
+     */
+    sectionTitle?: string | null;
     image?: (string | null) | Media;
     tagline?: string | null;
     headline?: string | null;
@@ -157,6 +165,10 @@ export interface Page {
   sections?:
     | {
         htmlElement: 'section' | 'article';
+        /**
+         * Short title displayed in the navigation menu and for screen readers
+         */
+        sectionTitle: string;
         headline: string;
         sectionId: string;
         content?: {
@@ -177,6 +189,25 @@ export interface Page {
         id?: string | null;
       }[]
     | null;
+  cta?: {
+    /**
+     * Button text shown on desktop (e.g. "Book a call")
+     */
+    label?: string | null;
+    link?: {
+      type?: ('reference' | 'custom') | null;
+      newTab?: boolean | null;
+      reference?: {
+        relationTo: 'pages';
+        value: string | Page;
+      } | null;
+      url?: string | null;
+    };
+    /**
+     * Icon identifier for mobile landscape mode (e.g. "calendar", "arrow-right")
+     */
+    icon?: string | null;
+  };
   meta?: {
     title?: string | null;
     /**
@@ -549,6 +580,8 @@ export interface PagesSelect<T extends boolean = true> {
     | T
     | {
         type?: T;
+        sectionId?: T;
+        sectionTitle?: T;
         image?: T;
         tagline?: T;
         headline?: T;
@@ -558,10 +591,25 @@ export interface PagesSelect<T extends boolean = true> {
     | T
     | {
         htmlElement?: T;
+        sectionTitle?: T;
         headline?: T;
         sectionId?: T;
         content?: T;
         id?: T;
+      };
+  cta?:
+    | T
+    | {
+        label?: T;
+        link?:
+          | T
+          | {
+              type?: T;
+              newTab?: T;
+              reference?: T;
+              url?: T;
+            };
+        icon?: T;
       };
   meta?:
     | T

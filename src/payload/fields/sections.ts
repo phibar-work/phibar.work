@@ -31,6 +31,14 @@ export const sections: ArrayField = {
       ],
     },
     {
+      name: 'sectionTitle',
+      type: 'text',
+      required: true,
+      admin: {
+        description: 'Short title displayed in the navigation menu and for screen readers',
+      },
+    },
+    {
       name: 'headline',
       type: 'text',
       required: true,

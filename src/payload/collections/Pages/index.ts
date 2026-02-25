@@ -10,6 +10,7 @@ import { slugField } from 'payload'
 import { authenticated } from '@/payload/access/authenticated'
 import { authenticatedOrPublished } from '@/payload/access/authenticatedOrPublished'
 import { hero } from '@/payload/fields/hero'
+import { link } from '@/payload/fields/link'
 import { sections } from '@/payload/fields/sections'
 import { populatePublishedAt } from '@/payload/hooks/populatePublishedAt'
 import { generatePreviewPath } from '@/utilities/generatePreviewPath'
@@ -61,6 +62,30 @@ export const Pages: CollectionConfig<'pages'> = {
         {
           label: 'Content',
           fields: [sections],
+        },
+        {
+          name: 'cta',
+          label: 'CTA',
+          fields: [
+            {
+              name: 'label',
+              type: 'text',
+              admin: {
+                description: 'Button text shown on desktop (e.g. "Book a call")',
+              },
+            },
+            link({
+              appearances: false,
+              disableLabel: true,
+            }),
+            {
+              name: 'icon',
+              type: 'text',
+              admin: {
+                description: 'Icon identifier for mobile landscape mode (e.g. "calendar", "arrow-right")',
+              },
+            },
+          ],
         },
         {
           name: 'meta',
