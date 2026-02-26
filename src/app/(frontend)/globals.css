@@ -4,23 +4,28 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-brand: #3A6DD6;
-  --color-brand-deep: #2C5BC9;
-  --color-brand-mid: #2F87C9;
-  --color-accent: #22C5C6;
+  --color-brand: #3a6dd6;
+  --color-brand-deep: #2c5bc9;
+  --color-brand-mid: #2f87c9;
+  --color-accent: #22c5c6;
 }
 
 @layer base {
   :root {
-    --frame-pad: 12px;
-    --frame-radius: 10px;
+    --frame-pad: 6px;
+    --frame-radius: 12px;
     --frame-inner: 6px;
-    --frame-bg: #f4f4f5; /* matches theme-color meta — light */
+    --frame-bg: red; /* debug — production: #f4f4f5 */
     --content-bg: #ffffff;
     --content-bg-dark: #09090b;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-size: unset;
     font-weight: unset;
   }
