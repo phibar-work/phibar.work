@@ -12,9 +12,9 @@
 
 @layer base {
   :root {
-    --frame-pad: 6px;
+    --frame-pad: 1px;
     --frame-radius: 12px;
-    --frame-inner: 6px;
+    --frame-inner: 4px;
     --frame-bg: red; /* debug — production: #f4f4f5 */
     --content-bg: #ffffff;
     --content-bg-dark: #09090b;
@@ -37,6 +37,14 @@
 
 :root:where(.dark) {
   --frame-bg: #27272a; /* matches theme-color meta — dark */
+}
+
+/* Tablet and up: larger inner border */
+@media (min-width: 768px) {
+  :root {
+    --frame-pad: 6px;
+    --frame-inner: 6px;
+  }
 }
 
 /* Fixed frame */
