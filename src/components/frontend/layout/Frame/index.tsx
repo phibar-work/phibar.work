@@ -7,14 +7,15 @@ import { FrameTopBar } from './FrameTopBar'
 
 export function Frame({ children }: { children: React.ReactNode }) {
   return (
-    <div className="frame">
-      <FrameTopBar />
+    <>
+      {/* Content: normal document flow, body scrolls → iOS Safari auto-hides chrome */}
+      <div className="frame-content">{children}</div>
 
-      <div className="frame-scroll" data-frame-scroll>
-        {children}
+      {/* Fixed overlay: frame border + nav + CTA — pointer-events pass through */}
+      <div className="frame-overlay">
+        <FrameTopBar />
+        <FrameBottomBar />
       </div>
-
-      <FrameBottomBar />
-    </div>
+    </>
   )
 }

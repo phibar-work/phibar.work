@@ -15,9 +15,12 @@
     --frame-pad: 1px;
     --frame-radius: 12px;
     --frame-inner: 4px;
-    --frame-bg: red; /* debug — production: #f4f4f5 */
+    --frame-bg: red; /* DEBUG — production: #f4f4f5 */
     --content-bg: #ffffff;
     --content-bg-dark: #09090b;
+    --frame-nav-h: 52px;
+    --frame-cta-h: 52px;
+    --frame-edge: calc(var(--frame-pad) + var(--frame-inner));
   }
 
   h1,
@@ -31,15 +34,18 @@
   }
 }
 
+/* Smooth scroll + anchor offset for fixed nav */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--frame-edge) + var(--frame-nav-h) + var(--frame-radius));
+}
+
 :root:where(.dark) {
   --content-bg: var(--content-bg-dark);
+  --frame-bg: #27272a;
 }
 
-:root:where(.dark) {
-  --frame-bg: #27272a; /* matches theme-color meta — dark */
-}
-
-/* Tablet and up: larger inner border */
+/* Tablet+: larger frame border */
 @media (min-width: 768px) {
   :root {
     --frame-pad: 6px;
@@ -47,48 +53,73 @@
   }
 }
 
-/* Fixed frame */
-.frame {
-  background: var(--frame-bg);
+/* ==========================================================
+   FRAME OVERLAY — fixed, pointer-events: none, visual only
+   ========================================================== */
+.frame-overlay {
   position: fixed;
   top: max(var(--frame-pad), env(safe-area-inset-top, 0px));
   bottom: max(var(--frame-pad), env(safe-area-inset-bottom, 0px));
   left: max(var(--frame-pad), env(safe-area-inset-left, 0px));
   right: max(var(--frame-pad), env(safe-area-inset-right, 0px));
   border-radius: var(--frame-radius);
-  overflow: hidden;
   padding: var(--frame-inner);
+  pointer-events: none;
+  z-index: 10;
+  transform: translate3d(0, 0, 0); /* prevent iOS Safari flicker */
 
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
+  grid-template-areas:
+    'nav'
+    '.'
+    'cta';
 }
 
-/* Nav — centered, shrinks to content width, scoops = exposed content on sides */
+/* ==========================================================
+   FRAME CONTENT — normal document flow, body scrolls
+   ========================================================== */
+.frame-content {
+  background: var(--content-bg);
+  border-radius: var(--frame-radius);
+  margin: var(--frame-edge);
+  min-height: calc(100svh - 2 * var(--frame-edge));
+  padding-top: calc(var(--frame-nav-h) + var(--frame-inner) + var(--frame-radius));
+  padding-bottom: calc(var(--frame-cta-h) + var(--frame-inner) + var(--frame-radius));
+}
+
+/* ==========================================================
+   NAV — portrait: top, centered, shrink-to-content
+   ========================================================== */
 .frame-nav {
-  grid-row: 1;
-  grid-column: 1;
+  grid-area: nav;
   justify-self: center;
   z-index: 1;
   position: relative;
+  pointer-events: auto;
   background: var(--frame-bg);
   border-bottom-left-radius: var(--frame-radius);
   border-bottom-right-radius: var(--frame-radius);
 }
 
-/* CTA — centered, shrinks to content width */
+/* ==========================================================
+   CTA — portrait: bottom, centered, shrink-to-content
+   ========================================================== */
 .frame-cta {
-  grid-row: 3;
-  grid-column: 1;
+  grid-area: cta;
   justify-self: center;
   z-index: 1;
   position: relative;
+  pointer-events: auto;
   background: var(--frame-bg);
   border-top-left-radius: var(--frame-radius);
   border-top-right-radius: var(--frame-radius);
 }
 
-/* Scoop borders — radial-gradient arcs at the concave corners */
+/* ==========================================================
+   SCOOPS — radial-gradient concave quarter-circles
+   ========================================================== */
 .frame-nav::before,
 .frame-nav::after,
 .frame-cta::before,
@@ -101,7 +132,7 @@
   z-index: 999;
 }
 
-/* Nav left scoop — swapped to left: 100% */
+/* Portrait nav scoops: outside nav, at its top edge */
 .frame-nav::before {
   top: 0;
   left: 100%;
@@ -112,7 +143,6 @@
   );
 }
 
-/* Nav right scoop — swapped to right: 100% */
 .frame-nav::after {
   top: 0;
   right: 100%;
@@ -123,7 +153,7 @@
   );
 }
 
-/* CTA left scoop — swapped to left: 100% */
+/* Portrait CTA scoops: outside CTA, at its bottom edge */
 .frame-cta::before {
   bottom: 0;
   left: 100%;
@@ -134,7 +164,6 @@
   );
 }
 
-/* CTA right scoop — swapped to right: 100% */
 .frame-cta::after {
   bottom: 0;
   right: 100%;
@@ -145,12 +174,105 @@
   );
 }
 
-/* Content fills entire frame, scrolls behind nav/cta */
-.frame-scroll {
-  grid-row: 1 / -1;
-  grid-column: 1;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  background: var(--content-bg);
-  border-radius: var(--frame-radius);
+/* ==========================================================
+   LANDSCAPE PHONE — nav LEFT, CTA RIGHT
+   ========================================================== */
+@media (orientation: landscape) and (max-height: 500px) {
+  .frame-overlay {
+    grid-template-rows: 1fr;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 'nav . cta';
+  }
+
+  html {
+    scroll-padding-top: var(--frame-edge);
+  }
+
+  /* Nav: left side, vertical, rounded right edge */
+  .frame-nav {
+    align-self: center;
+    justify-self: start;
+    border-radius: 0;
+    border-top-right-radius: var(--frame-radius);
+    border-bottom-right-radius: var(--frame-radius);
+  }
+
+  .frame-nav > div {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  /* CTA: right side, vertical, rounded left edge */
+  .frame-cta {
+    align-self: center;
+    justify-self: end;
+    border-radius: 0;
+    border-top-left-radius: var(--frame-radius);
+    border-bottom-left-radius: var(--frame-radius);
+  }
+
+  .frame-cta > div {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  /* Landscape nav scoops: above and below nav, flush with left frame edge */
+  .frame-nav::before {
+    top: auto;
+    bottom: 100%;
+    left: 0;
+    right: auto;
+    background: radial-gradient(
+      circle at 0% 0%,
+      transparent var(--frame-radius),
+      var(--frame-bg) var(--frame-radius)
+    );
+  }
+
+  .frame-nav::after {
+    top: 100%;
+    bottom: auto;
+    left: 0;
+    right: auto;
+    background: radial-gradient(
+      circle at 0% 100%,
+      transparent var(--frame-radius),
+      var(--frame-bg) var(--frame-radius)
+    );
+  }
+
+  /* Landscape CTA scoops: above and below CTA, flush with right frame edge */
+  .frame-cta::before {
+    top: auto;
+    bottom: 100%;
+    left: auto;
+    right: 0;
+    background: radial-gradient(
+      circle at 100% 0%,
+      transparent var(--frame-radius),
+      var(--frame-bg) var(--frame-radius)
+    );
+  }
+
+  .frame-cta::after {
+    top: 100%;
+    bottom: auto;
+    left: auto;
+    right: 0;
+    background: radial-gradient(
+      circle at 100% 100%,
+      transparent var(--frame-radius),
+      var(--frame-bg) var(--frame-radius)
+    );
+  }
+
+  /* Landscape content padding: left/right for nav/CTA instead of top/bottom */
+  .frame-content {
+    padding-top: var(--frame-inner);
+    padding-bottom: var(--frame-inner);
+    padding-left: calc(var(--frame-nav-h) + var(--frame-inner));
+    padding-right: calc(var(--frame-cta-h) + var(--frame-inner));
+  }
 }

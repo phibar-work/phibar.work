@@ -24,8 +24,7 @@ export function FrameMenu({ open, onClose }: FrameMenuProps) {
   )
 
   const handleScrollToTop = useCallback(() => {
-    const scroller = document.querySelector('[data-frame-scroll]')
-    if (scroller) scroller.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     onClose()
   }, [onClose])
 

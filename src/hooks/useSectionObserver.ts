@@ -15,8 +15,6 @@ export function useSectionObserver() {
 
     if (elements.length === 0) return
 
-    const scrollRoot = document.querySelector('[data-frame-scroll]') as Element | null
-
     const observer = new IntersectionObserver(
       (entries) => {
         // Find the topmost visible section
@@ -29,9 +27,8 @@ export function useSectionObserver() {
         }
       },
       {
-        root: scrollRoot,
-        // Observe when section enters the top 40% of the scroll area
-        rootMargin: '0px 0px -60% 0px',
+        root: null, // viewport — document scrolls, not an inner container
+        rootMargin: '-80px 0px -60% 0px', // -80px top accounts for fixed nav
         threshold: 0,
       },
     )
