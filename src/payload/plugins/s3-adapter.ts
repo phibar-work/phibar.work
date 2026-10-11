@@ -60,7 +60,7 @@ export const s3Adapter = ({ bucket, config, acl = 'public-read' }: S3AdapterConf
       },
       generateURL: ({ filename }) => {
         const key = getKey(filename)
-        // For MinIO/S3, generate the public URL
+        // For S3-compatible storage (SeaweedFS locally, AWS in prod), generate the public URL
         const endpoint = config.endpoint || `https://s3.${config.region}.amazonaws.com`
         return `${endpoint}/${bucket}/${key}`
       },

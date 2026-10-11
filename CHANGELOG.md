@@ -1,5 +1,11 @@
 # phibar-work
 
+## 1.12.1
+
+### Patch Changes
+
+- Replace MinIO with SeaweedFS for local S3 storage (MinIO images are no longer published) and pin local Node to 22 via `.node-version`
+
 ## 1.12.0
 
 ### Minor Changes
