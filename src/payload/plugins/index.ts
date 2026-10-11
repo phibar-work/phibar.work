@@ -57,7 +57,7 @@ export const plugins: Plugin[] = [
             },
             region: process.env.S3_REGION || 'us-east-1',
             endpoint: process.env.S3_ENDPOINT,
-            forcePathStyle: true, // Required for MinIO
+            forcePathStyle: true, // Required for SeaweedFS and other S3-compatible stores
           },
         }),
         disableLocalStorage: true,
