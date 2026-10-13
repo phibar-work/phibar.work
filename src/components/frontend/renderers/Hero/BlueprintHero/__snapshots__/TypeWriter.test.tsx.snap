@@ -1,0 +1,68 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TypeWriter snapshots > FadingOut matches snapshot 1`] = `
+<div
+  aria-hidden="true"
+  class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8 code-block-fade-out"
+>
+  <pre
+    class="leading-relaxed whitespace-pre-wrap"
+  />
+</div>
+`;
+
+exports[`TypeWriter snapshots > Inactive matches snapshot 1`] = `
+<div
+  aria-hidden="true"
+  class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
+>
+  <pre
+    class="leading-relaxed whitespace-pre-wrap"
+  />
+</div>
+`;
+
+exports[`TypeWriter snapshots > Paused matches snapshot 1`] = `
+<div
+  aria-hidden="true"
+  class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
+>
+  <pre
+    class="leading-relaxed whitespace-pre-wrap"
+  />
+</div>
+`;
+
+exports[`TypeWriter snapshots > Slow matches snapshot 1`] = `
+<div
+  aria-hidden="true"
+  class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
+>
+  <pre
+    class="leading-relaxed whitespace-pre-wrap"
+  >
+    <span
+      class="typing-cursor"
+    >
+      |
+    </span>
+  </pre>
+</div>
+`;
+
+exports[`TypeWriter snapshots > Typing matches snapshot 1`] = `
+<div
+  aria-hidden="true"
+  class="font-mono text-sm sm:text-base md:text-lg text-brand/70 max-w-2xl w-full px-8"
+>
+  <pre
+    class="leading-relaxed whitespace-pre-wrap"
+  >
+    <span
+      class="typing-cursor"
+    >
+      |
+    </span>
+  </pre>
+</div>
+`;

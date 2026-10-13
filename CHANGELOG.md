@@ -1,5 +1,11 @@
 # phibar-work
 
+## 1.14.0
+
+### Minor Changes
+
+- Add full-page Storybook stories (header, page body, footer with mock CMS data), FooterContent, BlueprintSvg and TypeWriter stories; split Footer into data loader and presentational FooterContent; extract RenderPage from the page route
+
 ## 1.13.0
 
 ### Minor Changes
