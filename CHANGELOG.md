@@ -1,5 +1,11 @@
 # phibar-work
 
+## 1.13.0
+
+### Minor Changes
+
+- Update all dependencies: Payload 3.90, Next 16.3, React 19.3, Storybook 10.6, Vite 8, Vitest 5, TypeScript 7, Biome 2.5, Tailwind 4.3, lucide-react 1.x and more
+
 ## 1.12.1
 
 ### Patch Changes

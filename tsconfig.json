@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "strict": true,
-    "baseUrl": ".",
     "esModuleInterop": true,
     "target": "ES2022",
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
@@ -22,7 +21,6 @@
     ],
     "paths": {
       "@payload-config": ["./src/payload.config.ts"],
-      "react": ["./node_modules/@types/react"],
       "@/*": ["./src/*"]
     }
   },
