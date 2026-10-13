@@ -3,6 +3,16 @@
 // Load .env files
 import 'dotenv/config'
 
+// Unmount rendered trees after each test. Testing Library only registers this
+// automatically with `globals: true`; without it, effects and timers (TypeWriter,
+// HeaderClient) fire after jsdom teardown -> "ReferenceError: window is not defined".
+import { cleanup } from '@testing-library/react'
+import { afterEach } from 'vitest'
+
+afterEach(() => {
+  cleanup()
+})
+
 // Mock window.matchMedia for jsdom
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
