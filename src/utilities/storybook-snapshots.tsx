@@ -10,12 +10,11 @@
  * runSnapshotTests(stories)
  * ```
  */
-import type { Meta, StoryFn } from '@storybook/react'
 import { composeStories } from '@storybook/react'
 import { render } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 
-type StoryModule = { default: Meta } & Record<string, StoryFn | Meta>
+type StoryModule = Parameters<typeof composeStories>[0]
 
 /**
  * Runs snapshot tests for all stories in a module.
@@ -27,7 +26,7 @@ export function runSnapshotTests(storyModule: StoryModule, name?: string) {
   const componentName = name ?? meta.title?.split('/').pop() ?? 'Component'
 
   describe(`${componentName} snapshots`, () => {
-    const stories = composeStories(storyModule as Parameters<typeof composeStories>[0])
+    const stories = composeStories(storyModule)
 
     for (const [storyName, Story] of Object.entries(stories)) {
       const StoryComponent = Story as React.ComponentType

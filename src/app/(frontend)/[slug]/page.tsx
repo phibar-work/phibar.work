@@ -5,10 +5,8 @@ import { getPayload, type RequiredDataFromCollectionSlug } from 'payload'
 import { cache } from 'react'
 import { LivePreviewListener } from '@/components/frontend/LivePreviewListener'
 import { PayloadRedirects } from '@/components/frontend/PayloadRedirects'
-import { RenderHero } from '@/components/frontend/renderers/Hero'
-import { RenderSections } from '@/components/frontend/renderers/Sections'
+import { RenderPage } from '@/components/frontend/renderers/Page'
 import { generateMeta } from '@/utilities/generateMeta'
-import { cn } from '@/utilities/ui'
 import PageClient from './page.client'
 
 export async function generateStaticParams() {
@@ -54,18 +52,13 @@ export default async function Page({ params: paramsPromise }: Args) {
     return <PayloadRedirects url={url} />
   }
 
-  const isFullBleedHero = page.hero?.type === 'blueprint'
-
   return (
-    <div className={cn('flex-1', !isFullBleedHero && 'py-16')}>
+    <RenderPage page={page}>
       <PageClient heroType={page.hero?.type} />
       <PayloadRedirects disableNotFound url={url} />
 
       {draft && <LivePreviewListener />}
-
-      <RenderHero hero={page.hero} title={page.title} />
-      <RenderSections sections={page.sections} />
-    </div>
+    </RenderPage>
   )
 }
 
